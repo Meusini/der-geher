@@ -150,7 +150,7 @@
 
   <footer>
     Made for the Der Geher crew · data from <a href="https://wkpronostiek.sporza.be/" target="_blank" rel="noopener">Sporza Pronostiek ↗</a><br>
-    Odds: bookmaker consensus (bet365 / FanDuel) · flags flagcdn.com · updated 10/06
+    Odds: bookmaker consensus (bet365 / FanDuel) · flags flagcdn.com · updated 11/06
   </footer>
 </div>
 
@@ -158,17 +158,17 @@
 // [name, exact, gd, winner, miss, points] — zero pre-kickoff
 const STAND=[
  ["Roll-up United",0,0,0,0,0],["Max",0,0,0,0,0],["Real Manon",0,0,0,0,0],
- ["Go-Dre-Go!",0,0,0,0,0],["Hup-Asje-Hup",0,0,0,0,0],["Bring it home",0,0,0,0,0]
+ ["Go-Dre-Go!",0,0,0,0,0],["Hup-Asje-Hup",0,0,0,0,0],["Bring it home",0,0,0,0,0],["Wuppie",0,0,0,0,0]
 ];
 const PREV={};
 // home, homeISO, away, awayISO, when, pH, pD, pA, bookScore, picks
 const NEXT=[
- ["Mexico","mx","South Africa","za","11/06 21:00",67,21,12,"Max 1-0 · Real Manon 2-0 · Go-Dre-Go! 3-1 · Hup-Asje-Hup 3-1 · Bring it home 2-0 · Roll-up United 1-0"],
- ["South Korea","kr","Czechia","cz","12/06 04:00",38,31,31,"Max 0-2 · Real Manon 0-1 · Go-Dre-Go! 1-2 · Hup-Asje-Hup 0-2 · Bring it home 0-1 · Roll-up United 1-1"],
- ["Canada","ca","Bosnia & Herzegovina","ba","12/06 21:00",54,24,22,"Max 1-0 · Real Manon 1-1 · Go-Dre-Go! 0-0 · Hup-Asje-Hup 1-1 · Bring it home 4-2 · Roll-up United 1-0"],
- ["United States","us","Paraguay","py","13/06 03:00",50,27,23,"Max 2-0 · Real Manon 2-1 · Go-Dre-Go! 1-1 · Hup-Asje-Hup 2-0 · Bring it home 0-0 · Roll-up United 1-0"],
- ["Qatar","qa","Switzerland","ch","13/06 21:00",7,15,78,"Max 0-1 · Real Manon 1-0 · Go-Dre-Go! 0-1 · Hup-Asje-Hup 0-0 · Bring it home 0-3 · Roll-up United 0-2"],
- ["Brazil","br","Morocco","ma","14/06 00:00",54,25,21,"Max 3-1 · Real Manon 2-0 · Go-Dre-Go! 5-1 · Hup-Asje-Hup 3-1 · Bring it home 0-0 · Roll-up United 1-0"]
+ ["Mexico","mx","South Africa","za","11/06 21:00",67,21,12,"Max 1-0 · Real Manon 2-0 · Go-Dre-Go! 3-1 · Hup-Asje-Hup 3-1 · Bring it home 2-0 · Wuppie 2-0 · Roll-up United 1-0"],
+ ["South Korea","kr","Czechia","cz","12/06 04:00",38,31,31,"Max 0-2 · Real Manon 0-1 · Go-Dre-Go! 1-2 · Hup-Asje-Hup 0-2 · Bring it home 0-1 · Wuppie 2-0 · Roll-up United 1-1"],
+ ["Canada","ca","Bosnia & Herzegovina","ba","12/06 21:00",54,24,22,"Max 1-0 · Real Manon 1-1 · Go-Dre-Go! 0-0 · Hup-Asje-Hup 1-1 · Bring it home 4-2 · Wuppie 3-0 · Roll-up United 1-0"],
+ ["United States","us","Paraguay","py","13/06 03:00",50,27,23,"Max 2-0 · Real Manon 2-1 · Go-Dre-Go! 1-1 · Hup-Asje-Hup 2-0 · Bring it home 0-0 · Wuppie 0-0 · Roll-up United 1-0"],
+ ["Qatar","qa","Switzerland","ch","13/06 21:00",7,15,78,"Max 0-1 · Real Manon 1-0 · Go-Dre-Go! 0-1 · Hup-Asje-Hup 0-0 · Bring it home 0-3 · Wuppie 0-0 · Roll-up United 0-2"],
+ ["Brazil","br","Morocco","ma","14/06 00:00",54,25,21,"Max 3-1 · Real Manon 2-0 · Go-Dre-Go! 5-1 · Hup-Asje-Hup 3-1 · Bring it home 0-0 · Wuppie 0-1 · Roll-up United 1-0"]
 ];
 
 function hue(n){let h=0;for(let i=0;i<n.length;i++)h=(h*31+n.charCodeAt(i))%360;return h;}
@@ -187,10 +187,10 @@ sub();setInterval(sub,60000);
 document.getElementById('missed').innerHTML=
  `Nothing yet — the ball rolls <b>Thursday 21:00</b> (Mexico – South Africa), so the standings stay level at 0. After each matchday, this is where the results, the surprises and who-gained-what will land.`;
 document.getElementById('upcoming').innerHTML=
- `<b>Six strong.</b> `+
+ `<b>Seven strong</b> — welcome Wuppie. `+
  `<b>Thu — Mexico – South Africa:</b> unanimous, everyone's on a Mexico win. `+
- `<b>Fri — South Korea – Czechia:</b> the group's nearly all-in on Czechia — five of six — with only Roll-up United taking the draw. `+
- `<b>Wildcards:</b> Go-Dre-Go! (5-1 Brazil!) and Bring it home (0-0 Brazil, 4-2 Canada) keep going their own way.`;
+ `<b>Fri — South Korea – Czechia:</b> five back Czechia, Roll-up United takes the draw, and new boy Wuppie is the lone Korea backer (2-0). `+
+ `<b>Wildcards:</b> Go-Dre-Go! (5-1 Brazil!), Bring it home (0-0 Brazil, 4-2 Canada) and Wuppie (Morocco over Brazil) all going their own way.`;
 
 // standings
 const ranked=[...STAND].sort((a,b)=> b[5]-a[5]||b[1]-a[1]||b[2]-a[2]||b[3]-a[3]||a[0].localeCompare(b[0]));
