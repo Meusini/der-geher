@@ -81,6 +81,9 @@
   .pr.book .n{color:var(--txt);font-weight:700}
   .pr .sc{font-weight:800;font-variant-numeric:tabular-nums;font-size:15px;width:40px;text-align:right;flex:0 0 auto}
   .sc.sg{color:var(--green)}.sc.sy{color:var(--amber)}.sc.sr{color:var(--red)}
+  .gh .tm .fin{color:#fff;font-weight:800;margin:0 8px;font-variant-numeric:tabular-nums}
+  .lpts{font-weight:800;font-variant-numeric:tabular-nums;font-size:12px;width:30px;text-align:right;flex:0 0 auto}
+  .lpts.sg{color:var(--green)}.lpts.sy{color:var(--amber)}.lpts.sr{color:var(--faint)}
   /* empty */
   .blank{padding:30px 18px;text-align:center;color:var(--faint);font-size:13.5px;line-height:1.6}
   .blank .e{font-size:26px;display:block;margin-bottom:8px}
@@ -135,7 +138,7 @@
   <!-- LAST -->
   <div class="panel" id="last">
     <div class="lbl">Last matches · result + everyone's score</div>
-    <div class="card"><div class="blank"><span class="e">⚽</span>No matches played yet.<br>First up: <b>Mexico – South Africa</b>, Thu 11 June 21:00.<br>Results &amp; everyone's points land here after kick-off.</div></div>
+    <div class="card" id="lastgames"></div>
   </div>
 
   <!-- NEXT -->
@@ -150,25 +153,30 @@
 
   <footer>
     Made for the Der Geher crew · data from <a href="https://wkpronostiek.sporza.be/" target="_blank" rel="noopener">Sporza Pronostiek ↗</a><br>
-    Odds: bookmaker consensus (bet365 / FanDuel) · flags flagcdn.com · updated 11/06
+    Odds: bookmaker consensus (bet365 / FanDuel) · flags flagcdn.com · updated 12/06
   </footer>
 </div>
 
 <script>
-// [name, exact, gd, winner, miss, points] — zero pre-kickoff
+// [name, exact, gd, winner, miss, points]
 const STAND=[
- ["Roll-up United",0,0,0,0,0],["Max",0,0,0,0,0],["Real Manon",0,0,0,0,0],
- ["Go-Dre-Go!",0,0,0,0,0],["Hup-Asje-Hup",0,0,0,0,0],["Bring it home",0,0,0,0,0],["Wuppie",0,0,0,0,0]
+ ["Wuppie",1,0,1,0,15],
+ ["Real Manon",1,0,0,1,11],["Bring it home",1,0,0,1,11],["Jonnited",1,0,0,1,11],
+ ["Hup-Asje-Hup",0,1,0,1,8],
+ ["Roll-up United",0,0,1,1,6],["Max Vertrappen",0,0,1,1,6],["Go-Dre-Go!",0,0,1,1,6]
 ];
 const PREV={};
-// home, homeISO, away, awayISO, when, pH, pD, pA, bookScore, picks
+// home, homeISO, away, awayISO, when, pH, pD, pA, picks
 const NEXT=[
- ["Mexico","mx","South Africa","za","11/06 21:00",67,21,12,"Max 1-0 · Real Manon 2-0 · Go-Dre-Go! 3-1 · Hup-Asje-Hup 3-1 · Bring it home 2-0 · Wuppie 2-0 · Roll-up United 1-0"],
- ["South Korea","kr","Czechia","cz","12/06 04:00",38,31,31,"Max 0-2 · Real Manon 0-1 · Go-Dre-Go! 1-2 · Hup-Asje-Hup 0-2 · Bring it home 0-1 · Wuppie 2-0 · Roll-up United 1-1"],
- ["Canada","ca","Bosnia & Herzegovina","ba","12/06 21:00",54,24,22,"Max 1-0 · Real Manon 1-1 · Go-Dre-Go! 0-0 · Hup-Asje-Hup 1-1 · Bring it home 4-2 · Wuppie 3-0 · Roll-up United 1-0"],
- ["United States","us","Paraguay","py","13/06 03:00",50,27,23,"Max 2-0 · Real Manon 2-1 · Go-Dre-Go! 1-1 · Hup-Asje-Hup 2-0 · Bring it home 0-0 · Wuppie 0-0 · Roll-up United 1-0"],
- ["Qatar","qa","Switzerland","ch","13/06 21:00",7,15,78,"Max 0-1 · Real Manon 1-0 · Go-Dre-Go! 0-1 · Hup-Asje-Hup 0-0 · Bring it home 0-3 · Wuppie 0-0 · Roll-up United 0-2"],
- ["Brazil","br","Morocco","ma","14/06 00:00",54,25,21,"Max 3-1 · Real Manon 2-0 · Go-Dre-Go! 5-1 · Hup-Asje-Hup 3-1 · Bring it home 0-0 · Wuppie 0-1 · Roll-up United 1-0"]
+ ["Canada","ca","Bosnia & Herzegovina","ba","12/06 21:00",54,24,22,"Max Vertrappen 1-0 · Real Manon 1-1 · Go-Dre-Go! 0-0 · Hup-Asje-Hup 1-1 · Bring it home 4-2 · Wuppie 3-0 · Jonnited 2-1 · Roll-up United 1-0"],
+ ["United States","us","Paraguay","py","13/06 03:00",50,27,23,"Max Vertrappen 2-0 · Real Manon 2-1 · Go-Dre-Go! 1-1 · Hup-Asje-Hup 2-0 · Bring it home 0-0 · Wuppie 0-0 · Jonnited 2-0 · Roll-up United 1-0"],
+ ["Qatar","qa","Switzerland","ch","13/06 21:00",7,15,78,"Max Vertrappen 0-1 · Real Manon 1-0 · Go-Dre-Go! 0-1 · Hup-Asje-Hup 0-0 · Bring it home 0-3 · Wuppie 0-0 · Jonnited 0-2 · Roll-up United 0-2"],
+ ["Brazil","br","Morocco","ma","14/06 00:00",54,25,21,"Max Vertrappen 3-1 · Real Manon 2-0 · Go-Dre-Go! 3-1 · Hup-Asje-Hup 3-1 · Bring it home 0-0 · Wuppie 0-1 · Jonnited 3-0 · Roll-up United 1-0"]
+];
+// home, homeISO, away, awayISO, when, homeScore, awayScore, "Name h-a|pts · ..."
+const LAST=[
+ ["South Korea","kr","Czechia","cz","12/06",2,1,"Wuppie 2-0|5 · Bring it home 0-1|1 · Go-Dre-Go! 1-2|1 · Hup-Asje-Hup 0-2|1 · Jonnited 0-1|1 · Max Vertrappen 0-2|1 · Real Manon 0-1|1 · Roll-up United 1-1|1"],
+ ["Mexico","mx","South Africa","za","11/06",2,0,"Bring it home 2-0|10 · Jonnited 2-0|10 · Real Manon 2-0|10 · Wuppie 2-0|10 · Hup-Asje-Hup 3-1|7 · Go-Dre-Go! 4-1|5 · Max Vertrappen 1-0|5 · Roll-up United 1-0|5"]
 ];
 
 function hue(n){let h=0;for(let i=0;i<n.length;i++)h=(h*31+n.charCodeAt(i))%360;return h;}
@@ -179,18 +187,16 @@ function out(s){const [h,a]=s.split('-').map(Number);return h>a?'H':h<a?'A':'D';
 function scClass(s,fav){const o=out(s);return o==='D'?'sy':(o===fav?'sg':'sr');}
 
 // subtitle
-const KICK=new Date("2026-06-11T21:00:00+02:00");
-function sub(){const now=new Date();let s=Math.max(0,(KICK-now)/1000);const d=Math.floor(s/86400),h=Math.floor((s%86400)/3600);
-  document.getElementById('sub').textContent=`Kicks off Thu 11 June, 21:00 · in ${d}d ${h}h · ${STAND.length} players`;}
-sub();setInterval(sub,60000);
+function sub(){document.getElementById('sub').textContent=`Matchday 1 underway · 2 of 72 group games played · ${STAND.length} players`;}
+sub();
 
 document.getElementById('missed').innerHTML=
- `Nothing yet — the ball rolls <b>Thursday 21:00</b> (Mexico – South Africa), so the standings stay level at 0. After each matchday, this is where the results, the surprises and who-gained-what will land.`;
+ `<b>Mexico 2–0 South Africa</b>: four of eight nailed the exact 2-0 (Real Manon, Bring it home, Jonnited, Wuppie, +10 each). `+
+ `<b>South Korea 2–1 Czechia</b> caught everyone out — only <b>Wuppie</b> backed a Korea win (2-0, +5), and that's enough to lead the table on <b>15</b>. Real Manon, Bring it home and Jonnited tie on 11.`;
 document.getElementById('upcoming').innerHTML=
- `<b>Seven strong</b> — welcome Wuppie. `+
- `<b>Thu — Mexico – South Africa:</b> unanimous, everyone's on a Mexico win. `+
- `<b>Fri — South Korea – Czechia:</b> five back Czechia, Roll-up United takes the draw, and new boy Wuppie is the lone Korea backer (2-0). `+
- `<b>Wildcards:</b> Go-Dre-Go! (5-1 Brazil!), Bring it home (0-0 Brazil, 4-2 Canada) and Wuppie (Morocco over Brazil) all going their own way.`;
+ `<b>Canada – Bosnia</b> (54/24/22) tonight, then <b>USA – Paraguay</b> and <b>Brazil – Morocco</b>. `+
+ `<b>Switzerland</b> at Qatar (78%) is the round's banker — everyone's on the Swiss. `+
+ `Wuppie's the wildcard again: 0-0 draws at Qatar and the USA, and a lone <b>Morocco-over-Brazil</b> (0-1).`;
 
 // standings
 const ranked=[...STAND].sort((a,b)=> b[5]-a[5]||b[1]-a[1]||b[2]-a[2]||b[3]-a[3]||a[0].localeCompare(b[0]));
@@ -215,6 +221,18 @@ document.getElementById('games').innerHTML=NEXT.map(m=>{
     <div class="gh"><div class="tm">${flag(hiso)} ${home}<span class="vs">–</span>${flag(aiso)} ${away}</div><div class="wh">${when}</div></div>
     <div class="odds"><div class="obar"><i class="h" style="width:${pH}%"></i><i class="d" style="width:${pD}%"></i><i class="a" style="width:${pA}%"></i></div>
       <div class="olab"><span>${home} ${pH}%</span><span class="mid">Draw ${pD}%</span><span>${away} ${pA}%</span></div></div>
+    <div class="picks">${rows}</div>
+  </div>`;
+}).join('');
+
+// last matches — result + everyone's pick + points
+function ptsCls(p){return p>=7?'sg':p===5?'sy':'sr';}
+document.getElementById('lastgames').innerHTML=LAST.map(m=>{
+  const [home,hiso,away,aiso,when,hs,as,picksStr]=m;
+  const picks=picksStr.split(' · ').filter(Boolean).map(p=>{const x=p.match(/^(.*)\s(\d+-\d+)\|(\d+)$/);return [x[1],x[2],+x[3]];});
+  const rows=picks.map(([nm,sc,pt])=>`<div class="pr"><span class="av" style="background:${col(nm)}">${ini(nm)}</span><span class="n">${nm}</span><span class="sc ${ptsCls(pt)}">${sc}</span><span class="lpts ${ptsCls(pt)}">+${pt}</span></div>`).join('');
+  return `<div class="game">
+    <div class="gh"><div class="tm">${flag(hiso)} ${home}<span class="fin">${hs}–${as}</span>${flag(aiso)} ${away}</div><div class="wh">${when} · FT</div></div>
     <div class="picks">${rows}</div>
   </div>`;
 }).join('');
