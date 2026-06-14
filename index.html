@@ -191,32 +191,36 @@
 
   <footer>
     Made for the Der Geher crew · data from <a href="https://wkpronostiek.sporza.be/" target="_blank" rel="noopener">Sporza Pronostiek ↗</a><br>
-    Odds: bookmaker consensus (bet365 / FanDuel) · flags flagcdn.com · updated 13/06 10:32
+    Odds: bookmaker consensus (bet365 / FanDuel) · flags flagcdn.com · updated 14/06 07:16
   </footer>
 </div>
 
 <script>
 // [name, exact, gd, winner, miss, points]
 const STAND=[
- ["Roll-up United",0,0,2,2,12],
- ["Max Vertrappen",0,0,2,2,12],
- ["Real Manon",2,0,1,1,26],
- ["Go-Dre-Go!",0,1,1,2,14],
- ["Hup-Asje-Hup",1,1,1,1,23],
- ["Bring it home",1,0,0,3,13],
- ["Wuppie",1,0,1,2,17],
- ["Jonnited",1,0,1,2,17]
+ ["Roll-up United",1,0,2,5,25],
+ ["Max Vertrappen",0,0,3,5,20],
+ ["Real Manon",2,0,2,4,34],
+ ["Go-Dre-Go!",0,1,2,5,22],
+ ["Hup-Asje-Hup",1,3,1,3,39],
+ ["Bring it home",2,1,0,5,32],
+ ["Wuppie",2,1,1,4,36],
+ ["Jonnited",2,0,1,5,30]
 ];
-const PREV={"Wuppie":1,"Bring it home":2,"Jonnited":3,"Real Manon":4,"Hup-Asje-Hup":5,"Go-Dre-Go!":6,"Max Vertrappen":7,"Roll-up United":8};
+const PREV={"Real Manon":1,"Hup-Asje-Hup":2,"Jonnited":3,"Wuppie":4,"Go-Dre-Go!":5,"Bring it home":6,"Max Vertrappen":7,"Roll-up United":8};
 // home, homeISO, away, awayISO, when, pH, pD, pA, picks
 const NEXT=[
- ["Qatar","qa","Switzerland","ch","13/06 21:00",7,15,78,"Max Vertrappen 0-1 · Real Manon 1-0 · Go-Dre-Go! 0-1 · Hup-Asje-Hup 0-0 · Bring it home 0-3 · Wuppie 0-0 · Jonnited 0-2 · Roll-up United 0-2"],
- ["Brazil","br","Morocco","ma","14/06 00:00",54,25,21,"Max Vertrappen 3-1 · Real Manon 2-0 · Go-Dre-Go! 3-1 · Hup-Asje-Hup 3-1 · Bring it home 0-0 · Wuppie 0-1 · Jonnited 3-0 · Roll-up United 1-0"],
- ["Haiti","ht","Scotland","gb-sct","14/06 03:00",14,23,63,"Max Vertrappen 0-2 · Real Manon 0-2 · Go-Dre-Go! 0-3 · Hup-Asje-Hup 1-2 · Bring it home 0-1 · Wuppie 0-1 · Jonnited 0-1 · Roll-up United 0-1"],
- ["Australia","au","Turkey","tr","14/06 06:00",31,27,42,"Max Vertrappen 1-1 · Real Manon 1-1 · Go-Dre-Go! 0-1 · Hup-Asje-Hup 0-3 · Bring it home 0-2 · Wuppie 0-0 · Jonnited 0-1 · Roll-up United 0-1"]
+ ["Duitsland","de","Curaçao","cw","14/06 19:00",88,8,4,"Max Vertrappen 2-0 · Real Manon 3-0 · Go-Dre-Go! 4-0 · Hup-Asje-Hup 3-1 · Bring it home 1-0 · Wuppie 4-0 · Jonnited 3-0 · Roll-up United 3-0"],
+ ["Nederland","nl","Japan","jp","14/06 22:00",50,26,24,"Max Vertrappen 0-0 · Real Manon 1-1 · Go-Dre-Go! 3-1 · Hup-Asje-Hup 1-2 · Bring it home 3-0 · Wuppie 0-0 · Jonnited 0-1 · Roll-up United 1-0"],
+ ["Ivoorkust","ci","Ecuador","ec","15/06 01:00",45,27,28,"Max Vertrappen 0-1 · Real Manon 1-0 · Go-Dre-Go! 1-1 · Hup-Asje-Hup 1-0 · Bring it home 1-2 · Wuppie 0-0 · Roll-up United 0-1"],
+ ["Zweden","se","Tunesië","tn","15/06 04:00",56,26,18,"Max Vertrappen 1-0 · Real Manon 1-1 · Go-Dre-Go! 2-0 · Hup-Asje-Hup 3-1 · Bring it home 0-2 · Wuppie 2-3 · Roll-up United 1-0"]
 ];
 // home, homeISO, away, awayISO, when, homeScore, awayScore, "Name h-a|pts · ..."
 const LAST=[
+ ["Australië","au","Turkije","tr","14/06",2,0,"Bring it home 0-2|1 · Go-Dre-Go! 0-1|1 · Hup-Asje-Hup 0-3|1 · Jonnited 0-1|1 · Max Vertrappen 1-1|1 · Real Manon 1-1|1 · Roll-up United 0-1|1 · Wuppie 0-0|1"],
+ ["Haïti","ht","Schotland","gb-sct","14/06",0,1,"Bring it home 0-1|10 · Jonnited 0-1|10 · Roll-up United 0-1|10 · Wuppie 0-1|10 · Hup-Asje-Hup 1-2|7 · Go-Dre-Go! 0-3|5 · Max Vertrappen 0-2|5 · Real Manon 0-2|5"],
+ ["Brazilië","br","Marokko","ma","14/06",1,1,"Bring it home 0-0|7 · Go-Dre-Go! 3-1|1 · Hup-Asje-Hup 3-1|1 · Jonnited 3-0|1 · Max Vertrappen 3-1|1 · Real Manon 2-0|1 · Roll-up United 1-0|1 · Wuppie 0-1|1"],
+ ["Qatar","qa","Zwitserland","ch","13/06",1,1,"Hup-Asje-Hup 0-0|7 · Wuppie 0-0|7 · Bring it home 0-3|1 · Go-Dre-Go! 0-1|1 · Jonnited 0-2|1 · Max Vertrappen 0-1|1 · Real Manon 1-0|1 · Roll-up United 0-2|1"],
  ["United States","us","Paraguay","py","13/06",4,1,"Hup-Asje-Hup 2-0|5 · Jonnited 2-0|5 · Max Vertrappen 2-0|5 · Real Manon 2-1|5 · Roll-up United 1-0|5 · Bring it home 0-0|1 · Go-Dre-Go! 1-1|1 · Wuppie 0-0|1"],
  ["Canada","ca","Bosnia & Herzegovina","ba","12/06",1,1,"Hup-Asje-Hup 1-1|10 · Real Manon 1-1|10 · Go-Dre-Go! 0-0|7 · Bring it home 4-2|1 · Jonnited 2-1|1 · Max Vertrappen 1-0|1 · Roll-up United 1-0|1 · Wuppie 3-0|1"],
  ["South Korea","kr","Czechia","cz","12/06",2,1,"Wuppie 2-0|5 · Bring it home 0-1|1 · Go-Dre-Go! 1-2|1 · Hup-Asje-Hup 0-2|1 · Jonnited 0-1|1 · Max Vertrappen 0-2|1 · Real Manon 0-1|1 · Roll-up United 1-1|1"],
@@ -231,13 +235,13 @@ function out(s){const [h,a]=s.split('-').map(Number);return h>a?'H':h<a?'A':'D';
 function scClass(s,fav){const o=out(s);return o==='D'?'sy':(o===fav?'sg':'sr');}
 
 // subtitle
-function sub(){document.getElementById('sub').textContent=`Matchday 1 underway · 4 of 72 group games played · ${STAND.length} players`;}
+function sub(){document.getElementById('sub').textContent=`Matchday 1 · 8 of 72 group games played · ${STAND.length} players`;}
 sub();
 
 document.getElementById('missed').innerHTML=
- `<b>Real Manon has bolted clear</b> on <b>26</b> — filled her card early and watched most of it land. <b>Hup-Asje-Hup</b> is glued to her bumper on 23, while early pacesetter <b>Wuppie</b> has slipped to 17. At the bottom, <b>Max Vertrappen</b> is doing the exact opposite of his namesake — no podiums, stuck in the gravel on 12, level with Roll-up United.`;
+ `<b>Hup-Asje-Hup storms to the top</b> on <b>39</b> — Qatar 0-0 (GD match!), Haiti exact (0-1), three goal-diff hits across 4 games. <b>Wuppie</b> went from 4th to 2nd (36): also nailed Haiti exact and the Qatar GD. <b>Real Manon</b> slips from 1st to 3rd — only scored 8pts across the four games while the rest caught up. <b>Bring it home</b> surged to 4th (32) off the Brazil draw GD (0-0) and a Haiti exact. Australia wiped out the rest — eight misses, no survivors.`;
 document.getElementById('upcoming').innerHTML=
- `<b>Switzerland</b> is the banker nobody can miss — or gain from. The real points sit in <b>Brazil–Morocco</b>: Real Manon will want to stretch the lead, and the chasers need a perfect call to reel her in. Roll-up United: time to stop parking the bus.`;
+ `<b>Germany vs Curaçao</b> is the warm-up act — everyone backs Germany, so no points change hands there unless someone nails the exact margin. <b>Netherlands–Japan</b> is the real battleground: Bring it home went 3-0, Go-Dre-Go! went 3-1, while Wuppie and Max Vertrappen both picked 0-0. Real Manon needs Germany and Japan to be kind — 5pts behind Wuppie, every point counts now.`;
 
 // standings
 const ranked=[...STAND].sort((a,b)=> b[5]-a[5]||b[1]-a[1]||b[2]-a[2]||b[3]-a[3]||a[0].localeCompare(b[0]));
