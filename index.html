@@ -191,33 +191,36 @@
 
   <footer>
     Made for the Der Geher crew · data from <a href="https://wkpronostiek.sporza.be/" target="_blank" rel="noopener">Sporza Pronostiek ↗</a><br>
-    Flags via flagcdn.com · updated 01/07 16:05
+    Flags via flagcdn.com · updated 02/07 16:04
   </footer>
 </div>
 
 <script>
 // [name, exact, gd, winner, miss, points]
 const STAND=[
- ["Roll-up United",9,9,26,28,387,76],
- ["Hup-Asje-Hup",9,12,19,32,377,76],
- ["Jonnited",11,12,15,34,372,69],
- ["Real Manon",8,9,25,30,351,53],
- ["Go-Dre-Go!",8,6,22,36,333,65],
- ["Max Vertrappen",3,7,27,35,300,51],
+ ["Roll-up United",9,9,26,28,421,110],
+ ["Hup-Asje-Hup",9,12,19,32,417,116],
+ ["Real Manon",8,9,25,30,405,107],
+ ["Jonnited",11,12,15,34,402,99],
+ ["Go-Dre-Go!",8,6,22,36,358,90],
+ ["Max Vertrappen",3,7,27,35,334,85],
  ["Wuppie",6,8,19,39,250,0],
  ["Bring it home",5,5,22,40,235,0]
 ];
 const PREV={"Roll-up United":1,"Hup-Asje-Hup":2,"Jonnited":3,"Real Manon":4,"Go-Dre-Go!":5,"Max Vertrappen":6,"Wuppie":7,"Bring it home":8};
-const PREVAT=79;
+const PREVAT=82;
 // home, homeISO, away, awayISO, when, pH, pD, pA, picks
 const NEXT=[
- ["Engeland","gb-eng","DR Congo","cd","01/07 18:00",null,null,null,"Roll-up United 2-0 · Max Vertrappen 2-0 · Real Manon 2-1 · Go-Dre-Go! 3-0 · Hup-Asje-Hup 2-1 · Jonnited 2-0"],
- ["België","be","Senegal","sn","01/07 22:00",null,null,null,"Roll-up United 2-1 · Max Vertrappen 2-1 · Real Manon 2-1 · Go-Dre-Go! 2-1 · Hup-Asje-Hup 3-0 · Jonnited 2-0"],
- ["Verenigde Staten","us","Bosnië en Herzegovina","ba","02/07 02:00",null,null,null,"Roll-up United 1-0 · Max Vertrappen 1-1 · Real Manon 2-0 · Go-Dre-Go! 0-1 · Hup-Asje-Hup 1-0 · Jonnited 1-0"],
- ["Spanje","es","Oostenrijk","at","02/07 21:00",null,null,null,"Roll-up United 2-1 · Max Vertrappen 1-0 · Real Manon 2-0 · Go-Dre-Go! 2-0 · Hup-Asje-Hup 2-1 · Jonnited 2-1"]
+ ["Spanje","es","Oostenrijk","at","02/07 21:00",null,null,null,"Roll-up United 2-1 · Max Vertrappen 1-0 · Real Manon 2-0 · Go-Dre-Go! 2-0 · Hup-Asje-Hup 2-1 · Jonnited 2-1"],
+ ["Portugal","pt","Kroatië","hr","03/07 01:00",null,null,null,"Roll-up United 1-0 · Max Vertrappen 0-0 · Real Manon 2-1 · Go-Dre-Go! 1-1 · Hup-Asje-Hup 2-0 · Jonnited 0-0"],
+ ["Zwitserland","ch","Algerije","dz","03/07 05:00",null,null,null,"Roll-up United 1-0 · Max Vertrappen 2-1 · Real Manon 0-1 · Go-Dre-Go! 1-2 · Hup-Asje-Hup 0-1 · Jonnited 1-1"],
+ ["Australië","au","Egypte","eg","03/07 20:00",null,null,null,"Roll-up United 1-2 · Max Vertrappen 0-1 · Real Manon 1-2 · Go-Dre-Go! 0-1 · Hup-Asje-Hup 1-2 · Jonnited 0-1"]
 ];
 // home, homeISO, away, awayISO, when, homeScore, awayScore, "Name h-a|pts · ..."
 const LAST=[
+ ["Verenigde Staten","us","Bosnië en Herzegovina","ba","02/07",2,0,"Real Manon 2-0|20 · Roll-up United 1-0|10 · Max Vertrappen 1-1|10 · Hup-Asje-Hup 1-0|10 · Jonnited 1-0|10 · Go-Dre-Go! 0-1|1"],
+ ["België","be","Senegal","sn","01/07",3,2,"Roll-up United 2-1|14 · Max Vertrappen 2-1|14 · Real Manon 2-1|14 · Go-Dre-Go! 2-1|14 · Hup-Asje-Hup 3-1|10 · Jonnited 2-0|10"],
+ ["Engeland","gb-eng","DR Congo","cd","01/07",2,1,"Real Manon 2-1|20 · Hup-Asje-Hup 2-1|20 · Roll-up United 2-0|10 · Max Vertrappen 2-0|10 · Go-Dre-Go! 3-0|10 · Jonnited 2-0|10"],
  ["Mexico","mx","Ecuador","ec","01/07",2,0,"Hup-Asje-Hup 3-1|14 · Roll-up United 1-0|10 · Real Manon 2-1|10 · Go-Dre-Go! 2-1|10 · Jonnited 2-1|10 · Max Vertrappen 1-2|1"],
  ["Frankrijk","fr","Zweden","se","30/06",3,0,"Max Vertrappen 3-0|20 · Roll-up United 2-0|10 · Real Manon 3-1|10 · Go-Dre-Go! 2-1|10 · Hup-Asje-Hup 3-2|10 · Jonnited 2-0|10"],
  ["Ivoorkust","ci","Noorwegen","no","30/06",1,2,"Roll-up United 1-2|20 · Hup-Asje-Hup 1-2|20 · Jonnited 0-1|14 · Max Vertrappen 0-3|10 · Go-Dre-Go! 0-2|10 · Real Manon 1-0|1"],
@@ -307,13 +310,13 @@ function out(s){const [h,a]=s.split('-').map(Number);return h>a?'H':h<a?'A':'D';
 function scClass(s,fav){const o=out(s);return o==='D'?'sy':(fav==null?'':(o===fav?'sg':'sr'));}
 
 // subtitle
-function sub(){document.getElementById('sub').textContent=`Knockout phase · 72/72 group · 7/32 KO · ${STAND.length} players`;}
+function sub(){document.getElementById('sub').textContent=`Knockout phase · 72/72 group · 10/32 KO · ${STAND.length} players`;}
 sub();
 
 document.getElementById('missed').innerHTML=
- `Latest in: <b>Mexico 2-0 Ecuador</b> — 4 called it dead-on (<b>Roll-up United, Real Manon, Go-Dre-Go!</b>). <b>Roll-up United</b> tops it on <b>387</b>, 10 clear, 9 exact and ice-cold. Spare a thought for <b>Bring it home</b>, lost at sea on 235.`;
+ `Latest in: <b>Verenigde Staten 2-0 Bosnië en Herzegovina</b> — 4 called it dead-on (<b>Roll-up United, Max Vertrappen, Hup-Asje-Hup</b>). <b>Roll-up United</b> tops it on <b>421</b>, 4 clear, 9 exact and ice-cold. Spare a thought for <b>Bring it home</b>, lost at sea on 235.`;
 document.getElementById('upcoming').innerHTML=
- `On deck: <b>Engeland – DR Congo</b>. 3 of 6 have piled onto <b>2-0</b>. <b>Go-Dre-Go!</b> is swinging for the fences at 3-0. Then <b>België–Senegal</b> and <b>Verenigde Staten–Bosnië en Herzegovina</b>. <b>Roll-up United</b> is the one to hunt down.`;
+ `On deck: <b>Spanje – Oostenrijk</b>. 3 of 6 have piled onto <b>2-1</b>. <b>Real Manon</b> is swinging for the fences at 2-0. Then <b>Portugal–Kroatië</b> and <b>Zwitserland–Algerije</b>. <b>Roll-up United</b> is the one to hunt down.`;
 
 // standings
 const ranked=[...STAND].sort((a,b)=> b[5]-a[5]||b[1]-a[1]||b[2]-a[2]||b[3]-a[3]||a[0].localeCompare(b[0]));
@@ -432,7 +435,7 @@ const CHANGES=[
  ["Real Manon",81,"België","Senegal",null,"2-1","2026-06-28T13:21"],
  ["Hup-Asje-Hup",74,"Brazilië","Japan",null,"2-1","2026-06-28T13:21"]
 ];
-const SNAP={"Roll-up United":{"3332966":"1-0","3332969":"1-0","3332994":"1-2","3332995":"2-1","3333001":"2-0","3333005":"0-1","3333008":"1-0","3333014":"2-0","3333019":"2-1","3333027":"1-0","3333040":"2-1"},"Max Vertrappen":{"3332966":"0-0","3332969":"1-1","3332994":"0-1","3333001":"2-0","3333005":"1-1","3333008":"2-1","3333014":"2-0","3333019":"1-0","3333027":"1-1","3333040":"2-1"},"Real Manon":{"3332966":"2-1","3332969":"2-0","3332994":"1-2","3332995":"1-0","3333001":"2-1","3333005":"1-2","3333008":"0-1","3333014":"2-1","3333019":"2-0","3333020":"0-2","3333027":"1-1","3333040":"2-1"},"Go-Dre-Go!":{"3332966":"1-1","3332969":"0-1","3332994":"0-1","3333001":"3-0","3333008":"1-2","3333014":"3-0","3333019":"2-0","3333027":"0-0","3333040":"2-1"},"Hup-Asje-Hup":{"3332966":"2-0","3332969":"1-0","3332994":"1-2","3333001":"3-1","3333008":"0-1","3333014":"2-1","3333019":"2-1","3333027":"1-1","3333040":"3-0"},"Jonnited":{"3332966":"0-0","3332969":"1-0","3332994":"0-1","3333001":"2-0","3333008":"1-1","3333014":"2-0","3333019":"2-1","3333027":"1-0","3333040":"2-0"}};
+const SNAP={"Roll-up United":{"3332966":"1-0","3332994":"1-2","3332995":"2-1","3333001":"2-0","3333005":"0-1","3333008":"1-0","3333019":"2-1","3333027":"1-0"},"Max Vertrappen":{"3332966":"0-0","3332994":"0-1","3333001":"2-0","3333005":"1-1","3333008":"2-1","3333019":"1-0","3333027":"1-1"},"Real Manon":{"3332966":"2-1","3332994":"1-2","3332995":"1-0","3333001":"2-1","3333005":"1-2","3333008":"0-1","3333019":"2-0","3333020":"0-2","3333027":"1-1"},"Go-Dre-Go!":{"3332964":"1-3","3332966":"1-1","3332976":"1-2","3332994":"0-1","3332995":"0-0","3333001":"3-0","3333005":"0-2","3333008":"1-2","3333019":"2-0","3333020":"1-2","3333027":"0-0"},"Hup-Asje-Hup":{"3332966":"2-0","3332994":"1-2","3333001":"3-1","3333008":"0-1","3333019":"2-1","3333027":"1-1"},"Jonnited":{"3332966":"0-0","3332994":"0-1","3333001":"2-0","3333008":"1-1","3333019":"2-1","3333027":"1-0"}};
 function renderChanges(){
   const host=document.getElementById('changefeed'); if(!host) return;
   if(!CHANGES.length){host.innerHTML='<div class="blank"><span class="e">🪵</span>No changes logged yet.<br>Edits show up here as players tweak their predictions.</div>';return;}
