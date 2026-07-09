@@ -191,7 +191,7 @@
 
   <footer>
     Made for the Der Geher crew · data from <a href="https://wkpronostiek.sporza.be/" target="_blank" rel="noopener">Sporza Pronostiek ↗</a><br>
-    Flags via flagcdn.com · updated 09/07 07:04
+    Flags via flagcdn.com · updated 09/07 20:46
   </footer>
 </div>
 
@@ -213,7 +213,7 @@ const NEXT=[
  ["Frankrijk","fr","Marokko","ma","09/07 22:00",null,null,null,"Roll-up United 2-0 · Jonnited 2-0 · Real Manon 2-1 · Catch me if you can ! 2-1 · Hup-Asje-Hup 1-2"],
  ["Spanje","es","België","be","10/07 21:00",null,null,null,"Roll-up United 1-0 · Jonnited 1-2 · Real Manon 1-2 · Catch me if you can ! 2-2 · Hup-Asje-Hup 1-2"],
  ["Noorwegen","no","Engeland","gb-eng","11/07 23:00",null,null,null,"Roll-up United 1-2 · Jonnited 2-1 · Real Manon 2-0 · Catch me if you can ! 1-1 · Hup-Asje-Hup 2-1"],
- ["Argentinië","ar","Zwitserland","ch","12/07 03:00",null,null,null,"Roll-up United 1-0 · Jonnited 2-0 · Catch me if you can ! 3-1 · Hup-Asje-Hup 2-0"]
+ ["Argentinië","ar","Zwitserland","ch","12/07 03:00",null,null,null,"Roll-up United 1-0 · Jonnited 2-0 · Real Manon 2-0 · Catch me if you can ! 3-1 · Hup-Asje-Hup 2-0"]
 ];
 // home, homeISO, away, awayISO, when, homeScore, awayScore, "Name h-a|pts · ..."
 const LAST=[
@@ -455,7 +455,7 @@ const CHANGES=[
  ["Real Manon",81,"België","Senegal",null,"2-1","2026-06-28T13:21"],
  ["Hup-Asje-Hup",74,"Brazilië","Japan",null,"2-1","2026-06-28T13:21"]
 ];
-const SNAP={"Roll-up United":{"3332996":"1-0","3332998":"1-2","3332999":"2-0","3333039":"1-0"},"Jonnited":{"3332996":"2-0","3332998":"2-1","3332999":"2-0","3333039":"1-2"},"Real Manon":{"3332998":"2-0","3332999":"2-1","3333039":"1-2"},"Catch me if you can !":{"3332996":"3-1","3332998":"1-1","3332999":"2-1","3333039":"2-2"},"Hup-Asje-Hup":{"3332996":"2-0","3332998":"2-1","3332999":"1-2","3333039":"1-2"}};
+const SNAP={"Roll-up United":{"3332996":"1-0","3332998":"1-2","3332999":"2-0","3333039":"1-0"},"Jonnited":{"3332996":"2-0","3332998":"2-1","3332999":"2-0","3333039":"1-2"},"Real Manon":{"3332996":"2-0","3332998":"2-0","3332999":"2-1","3333039":"1-2"},"Catch me if you can !":{"3332996":"3-1","3332998":"1-1","3332999":"2-1","3333039":"2-2"},"Hup-Asje-Hup":{"3332996":"2-0","3332998":"2-1","3332999":"1-2","3333039":"1-2"}};
 function renderChanges(){
   const host=document.getElementById('changefeed'); if(!host) return;
   if(!CHANGES.length){host.innerHTML='<div class="blank"><span class="e">🪵</span>No changes logged yet.<br>Edits show up here as players tweak their predictions.</div>';return;}
