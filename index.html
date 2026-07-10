@@ -191,128 +191,128 @@
 
   <footer>
     Made for the Der Geher crew · data from <a href="https://wkpronostiek.sporza.be/" target="_blank" rel="noopener">Sporza Pronostiek ↗</a><br>
-    Flags via flagcdn.com · updated 09/07 20:46
+    Flags via flagcdn.com · updated 10/07 09:58
   </footer>
 </div>
 
 <script>
 // [name, exact, gd, winner, miss, points]
 const STAND=[
- ["Roll-up United",9,9,26,28,569,258],
- ["Jonnited",11,12,15,34,546,243],
- ["Real Manon",8,9,25,30,527,229],
- ["Hup-Asje-Hup",9,12,19,32,516,215],
- ["Catch me if you can !",8,6,22,36,474,206],
+ ["Roll-up United",9,9,26,28,589,278],
+ ["Jonnited",11,12,15,34,566,263],
+ ["Real Manon",8,9,25,30,537,239],
+ ["Hup-Asje-Hup",9,12,19,32,517,216],
  ["Wuppie",6,8,19,39,250,0],
  ["Bring it home",5,5,22,40,235,0]
 ];
-const PREV={"Roll-up United":1,"Jonnited":2,"Hup-Asje-Hup":3,"Real Manon":4,"Catch me if you can !":5,"Wuppie":6,"Bring it home":7};
-const PREVAT=96;
+const PREV={"Roll-up United":1,"Jonnited":2,"Real Manon":3,"Hup-Asje-Hup":4,"Wuppie":5,"Bring it home":6};
+const PREVAT=97;
 // home, homeISO, away, awayISO, when, pH, pD, pA, picks
 const NEXT=[
- ["Frankrijk","fr","Marokko","ma","09/07 22:00",null,null,null,"Roll-up United 2-0 · Jonnited 2-0 · Real Manon 2-1 · Catch me if you can ! 2-1 · Hup-Asje-Hup 1-2"],
- ["Spanje","es","België","be","10/07 21:00",null,null,null,"Roll-up United 1-0 · Jonnited 1-2 · Real Manon 1-2 · Catch me if you can ! 2-2 · Hup-Asje-Hup 1-2"],
- ["Noorwegen","no","Engeland","gb-eng","11/07 23:00",null,null,null,"Roll-up United 1-2 · Jonnited 2-1 · Real Manon 2-0 · Catch me if you can ! 1-1 · Hup-Asje-Hup 2-1"],
- ["Argentinië","ar","Zwitserland","ch","12/07 03:00",null,null,null,"Roll-up United 1-0 · Jonnited 2-0 · Real Manon 2-0 · Catch me if you can ! 3-1 · Hup-Asje-Hup 2-0"]
+ ["Spanje","es","België","be","10/07 21:00",null,null,null,"Roll-up United 1-0 · Jonnited 1-2 · Real Manon 1-2 · Hup-Asje-Hup 1-2"],
+ ["Noorwegen","no","Engeland","gb-eng","11/07 23:00",null,null,null,"Roll-up United 1-2 · Jonnited 2-1 · Real Manon 2-0 · Hup-Asje-Hup 2-1"],
+ ["Argentinië","ar","Zwitserland","ch","12/07 03:00",null,null,null,"Roll-up United 1-0 · Jonnited 3-1 · Real Manon 2-0 · Hup-Asje-Hup 2-0"],
+ ["Frankrijk","fr","Winnaar KF 2","","14/07 21:00",null,null,null,""]
 ];
 // home, homeISO, away, awayISO, when, homeScore, awayScore, "Name h-a|pts · ..."
 const LAST=[
- ["Zwitserland","ch","Colombia","co","07/07",0,0,"Real Manon 2-1|10 · Jonnited 1-1|4 · Catch me if you can ! 1-1|4 · Roll-up United 0-1|1 · Hup-Asje-Hup 0-1|1"],
- ["Argentinië","ar","Egypte","eg","07/07",3,2,"Catch me if you can ! 3-2|20 · Roll-up United 1-0|14 · Jonnited 2-1|14 · Hup-Asje-Hup 1-1|10 · Real Manon 1-2|1"],
- ["Verenigde Staten","us","België","be","07/07",1,4,"Roll-up United 1-2|10 · Jonnited 0-2|10 · Real Manon 1-1|10 · Catch me if you can ! 1-3|10 · Hup-Asje-Hup 1-2|10"],
- ["Portugal","pt","Spanje","es","06/07",0,1,"Roll-up United 0-1|20 · Jonnited 0-1|20 · Real Manon 1-2|14 · Catch me if you can ! 2-2|1 · Hup-Asje-Hup 2-1|1"],
- ["Mexico","mx","Engeland","gb-eng","06/07",2,3,"Roll-up United 0-1|14 · Jonnited 0-1|14 · Catch me if you can ! 1-2|14 · Hup-Asje-Hup 1-1|10 · Real Manon 2-1|1"],
- ["Brazilië","br","Noorwegen","no","05/07",1,2,"Roll-up United 2-1|1 · Jonnited 1-1|1 · Real Manon 1-0|1 · Catch me if you can ! 0-0|1 · Hup-Asje-Hup 2-0|1"],
- ["Paraguay","py","Frankrijk","fr","04/07",0,1,"Catch me if you can ! 1-2|14 · Hup-Asje-Hup 1-2|14 · Roll-up United 0-2|10 · Jonnited 0-3|10 · Real Manon 0-2|10"],
- ["Canada","ca","Marokko","ma","04/07",0,3,"Roll-up United 0-1|10 · Jonnited 0-2|10 · Real Manon 1-2|10 · Catch me if you can ! 0-2|10 · Hup-Asje-Hup 1-3|10"],
- ["Colombia","co","Ghana","gh","04/07",1,0,"Jonnited 1-0|20 · Roll-up United 2-1|14 · Real Manon 1-1|10 · Catch me if you can ! 0-0|10 · Hup-Asje-Hup 1-1|1"],
- ["Argentinië","ar","Kaapverdië","cv","04/07",3,2,"Real Manon 2-1|14 · Roll-up United 2-0|10 · Jonnited 2-0|10 · Catch me if you can ! 3-0|10 · Hup-Asje-Hup 3-1|10"],
- ["Australië","au","Egypte","eg","03/07",1,1,"Roll-up United 0-1|10 · Jonnited 0-1|10 · Real Manon 1-2|10 · Catch me if you can ! 0-1|10 · Hup-Asje-Hup 1-2|10"],
- ["Zwitserland","ch","Algerije","dz","03/07",2,0,"Roll-up United 1-0|10 · Jonnited 1-1|1 · Real Manon 0-1|1 · Catch me if you can ! 1-2|1 · Hup-Asje-Hup 0-1|1"],
- ["Portugal","pt","Kroatië","hr","03/07",2,1,"Real Manon 2-1|20 · Roll-up United 1-0|14 · Jonnited 0-0|10 · Hup-Asje-Hup 2-0|10 · Catch me if you can ! 1-1|1"],
- ["Spanje","es","Oostenrijk","at","02/07",3,0,"Roll-up United 2-0|10 · Jonnited 2-1|10 · Real Manon 2-0|10 · Catch me if you can ! 2-0|10 · Hup-Asje-Hup 2-1|10"],
- ["Verenigde Staten","us","Bosnië en Herzegovina","ba","02/07",2,0,"Real Manon 2-0|20 · Roll-up United 1-0|10 · Jonnited 1-0|10 · Hup-Asje-Hup 1-0|10 · Catch me if you can ! 0-1|1"],
- ["België","be","Senegal","sn","01/07",3,2,"Roll-up United 2-1|14 · Real Manon 2-1|14 · Catch me if you can ! 2-1|14 · Jonnited 2-0|10 · Hup-Asje-Hup 3-1|10"],
- ["Engeland","gb-eng","DR Congo","cd","01/07",2,1,"Real Manon 2-1|20 · Hup-Asje-Hup 2-1|20 · Roll-up United 2-0|10 · Jonnited 2-0|10 · Catch me if you can ! 3-0|10"],
- ["Mexico","mx","Ecuador","ec","01/07",2,0,"Hup-Asje-Hup 3-1|14 · Roll-up United 1-0|10 · Jonnited 2-1|10 · Real Manon 2-1|10 · Catch me if you can ! 2-1|10"],
- ["Frankrijk","fr","Zweden","se","30/06",3,0,"Roll-up United 2-0|10 · Jonnited 2-0|10 · Real Manon 3-1|10 · Catch me if you can ! 2-1|10 · Hup-Asje-Hup 3-2|10"],
- ["Ivoorkust","ci","Noorwegen","no","30/06",1,2,"Roll-up United 1-2|20 · Hup-Asje-Hup 1-2|20 · Jonnited 0-1|14 · Catch me if you can ! 0-2|10 · Real Manon 1-0|1"],
- ["Nederland","nl","Marokko","ma","30/06",1,1,"Jonnited 1-2|10 · Catch me if you can ! 1-1|10 · Hup-Asje-Hup 1-3|10 · Roll-up United 1-0|1 · Real Manon 1-0|1"],
- ["Duitsland","de","Paraguay","py","29/06",1,1,"Roll-up United 2-0|1 · Jonnited 1-0|1 · Real Manon 3-1|1 · Catch me if you can ! 2-1|1 · Hup-Asje-Hup 2-1|1"],
- ["Brazilië","br","Japan","jp","29/06",2,1,"Hup-Asje-Hup 2-1|20 · Roll-up United 1-0|14 · Jonnited 2-0|10 · Real Manon 2-0|10 · Catch me if you can ! 2-0|10"],
- ["Zuid-Afrika","za","Canada","ca","28/06",0,1,"Roll-up United 0-1|20 · Real Manon 0-1|20 · Jonnited 1-2|14 · Catch me if you can ! 1-2|14 · Hup-Asje-Hup 1-0|1"],
- ["Algerije","dz","Oostenrijk","at","28/06",3,3,"Roll-up United 1-1|7 · Bring it home 2-2|7 · Wuppie 0-0|7 · Jonnited 1-0|1 · Real Manon 2-1|1 · Catch me if you can ! 0-1|1 · Hup-Asje-Hup 1-0|1"],
- ["Jordanië","jo","Argentinië","ar","28/06",1,3,"Catch me if you can ! 1-3|10 · Jonnited 0-2|7 · Roll-up United 0-1|5 · Real Manon 0-3|5 · Hup-Asje-Hup 2-3|5 · Bring it home 1-1|1 · Wuppie 0-0|1"],
- ["DR Congo","cd","Oezbekistan","uz","28/06",3,1,"Hup-Asje-Hup 2-0|7 · Roll-up United 1-0|5 · Real Manon 1-0|5 · Jonnited 0-1|1 · Catch me if you can ! 0-0|1 · Bring it home 0-0|1 · Wuppie 2-4|1"],
- ["Colombia","co","Portugal","pt","28/06",0,0,"Bring it home 0-0|10 · Wuppie 0-0|10 · Roll-up United 1-1|7 · Jonnited 2-1|1 · Real Manon 0-2|1 · Catch me if you can ! 0-2|1 · Hup-Asje-Hup 1-3|1"],
- ["Kroatië","hr","Ghana","gh","27/06",2,1,"Real Manon 2-1|10 · Hup-Asje-Hup 2-1|10 · Roll-up United 1-0|7 · Jonnited 1-0|7 · Catch me if you can ! 3-0|5 · Bring it home 0-0|1 · Wuppie 1-1|1"],
- ["Panama","pa","Engeland","gb-eng","27/06",0,2,"Roll-up United 0-2|10 · Jonnited 0-2|10 · Real Manon 0-2|10 · Catch me if you can ! 1-3|7 · Hup-Asje-Hup 1-2|5 · Bring it home 0-0|1 · Wuppie 2-1|1"],
- ["Nieuw-Zeeland","nz","België","be","27/06",1,5,"Roll-up United 1-3|5 · Jonnited 0-2|5 · Real Manon 1-2|5 · Catch me if you can ! 1-4|5 · Hup-Asje-Hup 1-2|5 · Bring it home 2-4|5 · Wuppie 0-3|5"],
- ["Egypte","eg","Iran","ir","27/06",1,1,"Jonnited 1-1|10 · Catch me if you can ! 1-1|10 · Roll-up United 1-0|1 · Real Manon 2-1|1 · Hup-Asje-Hup 1-2|1 · Bring it home 0-2|1 · Wuppie 0-1|1"],
- ["Kaapverdië","cv","Saudi-Arabië","sa","27/06",0,0,"Bring it home 0-0|10 · Roll-up United 1-1|7 · Catch me if you can ! 1-1|7 · Jonnited 1-0|1 · Real Manon 1-0|1 · Hup-Asje-Hup 2-1|1 · Wuppie 1-2|1"],
- ["Uruguay","uy","Spanje","es","27/06",0,1,"Catch me if you can ! 0-1|10 · Jonnited 1-2|7 · Hup-Asje-Hup 2-3|7 · Bring it home 2-3|7 · Roll-up United 0-2|5 · Real Manon 1-3|5 · Wuppie 1-3|5"],
- ["Senegal","sn","Irak","iq","26/06",5,0,"Roll-up United 2-1|5 · Real Manon 2-1|5 · Hup-Asje-Hup 3-1|5 · Bring it home 2-1|5 · Wuppie 2-0|5 · Jonnited 0-1|1 · Catch me if you can ! 0-0|1"],
- ["Noorwegen","no","Frankrijk","fr","26/06",1,4,"Real Manon 0-3|7 · Roll-up United 0-1|5 · Jonnited 0-2|5 · Hup-Asje-Hup 0-2|5 · Bring it home 1-2|5 · Wuppie 0-2|5 · Catch me if you can ! 1-1|1"],
- ["Paraguay","py","Australië","au","26/06",0,0,"Hup-Asje-Hup 1-1|7 · Roll-up United 0-1|1 · Jonnited 2-0|1 · Real Manon 0-1|1 · Catch me if you can ! 1-0|1 · Bring it home 1-2|1 · Wuppie 2-0|1"],
- ["Turkije","tr","Verenigde Staten","us","26/06",3,2,"Jonnited 1-0|7 · Catch me if you can ! 2-1|7 · Hup-Asje-Hup 2-0|5 · Wuppie 3-1|5 · Roll-up United 0-1|1 · Real Manon 1-1|1 · Bring it home 0-0|1"],
- ["Tunesië","tn","Nederland","nl","26/06",1,3,"Hup-Asje-Hup 1-3|10 · Roll-up United 0-2|7 · Real Manon 1-2|5 · Catch me if you can ! 1-2|5 · Bring it home 1-2|5 · Jonnited 0-0|1 · Wuppie 0-0|1"],
- ["Japan","jp","Zweden","se","26/06",1,1,"Roll-up United 1-0|1 · Jonnited 2-0|1 · Real Manon 2-1|1 · Catch me if you can ! 0-2|1 · Hup-Asje-Hup 2-1|1 · Bring it home 5-3|1 · Wuppie 0-1|1"],
- ["Curaçao","cw","Ivoorkust","ci","25/06",0,2,"Roll-up United 0-2|10 · Real Manon 1-2|5 · Jonnited 1-1|1 · Catch me if you can ! 1-1|1 · Hup-Asje-Hup 3-1|1 · Bring it home 2-1|1 · Wuppie 2-1|1"],
- ["Ecuador","ec","Duitsland","de","25/06",2,1,"Roll-up United 1-2|1 · Jonnited 0-1|1 · Real Manon 0-2|1 · Catch me if you can ! 0-2|1 · Hup-Asje-Hup 1-3|1 · Bring it home 2-3|1 · Wuppie 0-3|1"],
- ["Tsjechië","cz","Mexico","mx","25/06",0,3,"Roll-up United 0-1|5 · Jonnited 0-2|5 · Real Manon 0-1|5 · Hup-Asje-Hup 1-2|5 · Bring it home 0-1|5 · Catch me if you can ! 1-1|1 · Wuppie 1-0|1"],
- ["Zuid-Afrika","za","Zuid-Korea","kr","25/06",1,0,"Jonnited 2-1|7 · Real Manon 2-0|5 · Roll-up United 0-1|1 · Catch me if you can ! 0-2|1 · Hup-Asje-Hup 1-3|1 · Bring it home 0-1|1 · Wuppie 1-2|1"],
- ["Marokko","ma","Haïti","ht","25/06",4,2,"Roll-up United 2-0|7 · Jonnited 2-0|7 · Real Manon 2-0|7 · Hup-Asje-Hup 3-1|7 · Catch me if you can ! 3-0|5 · Bring it home 1-0|5 · Wuppie 1-0|5"],
- ["Schotland","gb-sct","Brazilië","br","25/06",0,3,"Roll-up United 0-1|5 · Jonnited 0-2|5 · Real Manon 0-2|5 · Catch me if you can ! 1-3|5 · Hup-Asje-Hup 2-3|5 · Bring it home 4-3|1 · Wuppie 0-0|1"],
- ["Bosnië en Herzegovina","ba","Qatar","qa","24/06",3,1,"Jonnited 2-0|7 · Roll-up United 1-0|5 · Catch me if you can ! 1-0|5 · Bring it home 1-0|5 · Real Manon 0-1|1 · Hup-Asje-Hup 1-2|1 · Wuppie 0-1|1"],
- ["Zwitserland","ch","Canada","ca","24/06",2,1,"Roll-up United 2-1|10 · Real Manon 2-1|10 · Catch me if you can ! 2-1|10 · Hup-Asje-Hup 2-1|10 · Jonnited 1-0|7 · Wuppie 1-0|7 · Bring it home 0-1|1"],
- ["Colombia","co","DR Congo","cd","24/06",1,0,"Roll-up United 1-0|10 · Jonnited 1-0|10 · Catch me if you can ! 2-0|5 · Bring it home 4-2|5 · Real Manon 1-1|1 · Hup-Asje-Hup 1-2|1 · Wuppie 0-1|1"],
- ["Panama","pa","Kroatië","hr","24/06",0,1,"Roll-up United 0-1|10 · Jonnited 0-1|10 · Real Manon 1-2|7 · Bring it home 1-2|7 · Catch me if you can ! 0-2|5 · Hup-Asje-Hup 1-3|5 · Wuppie 2-2|1"],
- ["Engeland","gb-eng","Ghana","gh","23/06",0,0,"Roll-up United 2-0|1 · Jonnited 3-0|1 · Real Manon 2-0|1 · Catch me if you can ! 2-0|1 · Hup-Asje-Hup 2-1|1 · Bring it home 3-2|1 · Wuppie 1-0|1"],
- ["Portugal","pt","Oezbekistan","uz","23/06",5,0,"Roll-up United 2-0|5 · Jonnited 2-0|5 · Real Manon 2-0|5 · Catch me if you can ! 2-1|5 · Hup-Asje-Hup 2-1|5 · Bring it home 1-0|5 · Wuppie 4-2|5"],
- ["Jordanië","jo","Algerije","dz","23/06",1,2,"Roll-up United 0-1|7 · Jonnited 0-1|7 · Real Manon 0-1|7 · Wuppie 0-2|5 · Catch me if you can ! 0-0|1 · Hup-Asje-Hup 2-1|1 · Bring it home 0-0|1"],
- ["Noorwegen","no","Senegal","sn","23/06",3,2,"Roll-up United 1-0|7 · Wuppie 1-0|7 · Catch me if you can ! 2-0|5 · Bring it home 2-0|5 · Jonnited 0-1|1 · Real Manon 0-1|1 · Hup-Asje-Hup 1-2|1"],
- ["Frankrijk","fr","Irak","iq","22/06",3,0,"Jonnited 3-0|10 · Hup-Asje-Hup 3-0|10 · Roll-up United 4-0|5 · Real Manon 3-1|5 · Catch me if you can ! 2-0|5 · Wuppie 4-2|5 · Bring it home 3-3|1"],
- ["Argentinië","ar","Oostenrijk","at","22/06",2,0,"Real Manon 2-0|10 · Catch me if you can ! 2-0|10 · Hup-Asje-Hup 3-1|7 · Roll-up United 1-0|5 · Jonnited 3-0|5 · Wuppie 2-1|5 · Bring it home 1-2|1"],
- ["Nieuw-Zeeland","nz","Egypte","eg","22/06",1,3,"Jonnited 0-2|7 · Real Manon 0-2|7 · Roll-up United 0-1|5 · Wuppie 1-2|5 · Catch me if you can ! 0-0|1 · Hup-Asje-Hup 1-1|1 · Bring it home 2-2|1"],
- ["Uruguay","uy","Kaapverdië","cv","22/06",2,2,"Real Manon 1-1|7 · Catch me if you can ! 1-1|7 · Roll-up United 2-0|1 · Jonnited 2-1|1 · Hup-Asje-Hup 2-1|1 · Bring it home 1-0|1 · Wuppie 3-0|1"],
- ["België","be","Iran","ir","21/06",0,0,"Roll-up United 2-0|1 · Jonnited 2-1|1 · Real Manon 2-0|1 · Catch me if you can ! 2-0|1 · Hup-Asje-Hup 2-0|1 · Bring it home 3-0|1 · Wuppie 1-0|1"],
- ["Spanje","es","Saudi-Arabië","sa","21/06",4,0,"Roll-up United 3-0|5 · Jonnited 3-1|5 · Real Manon 2-0|5 · Catch me if you can ! 2-0|5 · Hup-Asje-Hup 2-1|5 · Bring it home 2-1|5 · Wuppie 0-0|1"],
- ["Tunesië","tn","Japan","jp","21/06",0,4,"Roll-up United 0-1|5 · Hup-Asje-Hup 1-2|5 · Bring it home 0-2|5 · Jonnited 1-1|1 · Real Manon 1-1|1 · Catch me if you can ! 0-0|1 · Wuppie 1-0|1"],
- ["Ecuador","ec","Curaçao","cw","21/06",0,0,"Catch me if you can ! 0-0|10 · Bring it home 0-0|10 · Roll-up United 3-0|1 · Jonnited 2-0|1 · Real Manon 1-0|1 · Hup-Asje-Hup 0-1|1 · Wuppie 4-2|1"],
- ["Duitsland","de","Ivoorkust","ci","20/06",2,1,"Jonnited 2-1|10 · Roll-up United 1-0|7 · Bring it home 1-0|7 · Real Manon 3-0|5 · Catch me if you can ! 3-1|5 · Hup-Asje-Hup 2-0|5 · Wuppie 0-0|1"],
- ["Nederland","nl","Zweden","se","20/06",5,1,"Roll-up United 2-1|5 · Jonnited 1-0|5 · Real Manon 1-0|5 · Bring it home 1-0|5 · Wuppie 1-0|5 · Catch me if you can ! 1-1|1 · Hup-Asje-Hup 1-2|1"],
- ["Turkije","tr","Paraguay","py","20/06",0,1,"Bring it home 1-3|5 · Roll-up United 1-0|1 · Jonnited 1-1|1 · Real Manon 2-0|1 · Catch me if you can ! 2-1|1 · Hup-Asje-Hup 2-0|1 · Wuppie 1-0|1"],
- ["Brazilië","br","Haïti","ht","20/06",3,0,"Roll-up United 3-0|10 · Real Manon 3-0|10 · Catch me if you can ! 3-0|10 · Wuppie 3-0|10 · Jonnited 2-0|5 · Hup-Asje-Hup 4-0|5 · Bring it home 2-1|5"],
- ["Schotland","gb-sct","Marokko","ma","20/06",0,1,"Roll-up United 0-1|10 · Wuppie 0-1|10 · Hup-Asje-Hup 1-2|7 · Jonnited 0-2|5 · Real Manon 0-2|5 · Catch me if you can ! 1-1|1 · Bring it home 2-1|1"],
- ["Verenigde Staten","us","Australië","au","19/06",2,0,"Jonnited 2-0|10 · Wuppie 3-1|7 · Roll-up United 2-1|5 · Real Manon 2-1|5 · Bring it home 2-1|5 · Catch me if you can ! 0-0|1 · Hup-Asje-Hup 1-1|1"],
- ["Mexico","mx","Zuid-Korea","kr","19/06",1,0,"Jonnited 2-1|7 · Hup-Asje-Hup 2-1|7 · Catch me if you can ! 3-1|5 · Bring it home 3-0|5 · Wuppie 3-1|5 · Roll-up United 1-1|1 · Real Manon 1-1|1"],
- ["Canada","ca","Qatar","qa","19/06",6,0,"Roll-up United 1-1|1 · Jonnited 0-1|1 · Real Manon 0-1|1 · Catch me if you can ! 0-0|1 · Hup-Asje-Hup 1-1|1 · Bring it home 0-1|1 · Wuppie 0-0|1"],
- ["Zwitserland","ch","Bosnië en Herzegovina","ba","18/06",4,1,"Jonnited 1-0|5 · Real Manon 1-0|5 · Catch me if you can ! 2-0|5 · Bring it home 2-1|5 · Roll-up United 1-1|1 · Hup-Asje-Hup 1-1|1 · Wuppie 0-0|1"],
- ["Tsjechië","cz","Zuid-Afrika","za","18/06",1,1,"Roll-up United 1-1|10 · Jonnited 1-1|10 · Hup-Asje-Hup 1-1|10 · Real Manon 1-0|1 · Catch me if you can ! 2-0|1 · Bring it home 1-0|1 · Wuppie 2-0|1"],
- ["Oezbekistan","uz","Colombia","co","18/06",1,3,"Hup-Asje-Hup 0-2|7 · Roll-up United 0-1|5 · Jonnited 1-2|5 · Real Manon 1-0|1 · Catch me if you can ! 0-0|1 · Bring it home 1-1|1 · Wuppie 1-0|1"],
- ["Ghana","gh","Panama","pa","18/06",1,0,"Wuppie 2-1|7 · Hup-Asje-Hup 2-0|5 · Roll-up United 1-1|1 · Jonnited 0-1|1 · Real Manon 1-1|1 · Catch me if you can ! 1-1|1 · Bring it home 0-0|1"],
- ["Engeland","gb-eng","Kroatië","hr","17/06",4,2,"Real Manon 2-1|5 · Wuppie 2-1|5 · Roll-up United 1-1|1 · Jonnited 1-1|1 · Catch me if you can ! 1-1|1 · Hup-Asje-Hup 1-2|1 · Bring it home 1-1|1"],
- ["Portugal","pt","DR Congo","cd","17/06",1,1,"Roll-up United 2-0|1 · Jonnited 3-0|1 · Real Manon 2-0|1 · Catch me if you can ! 3-0|1 · Hup-Asje-Hup 4-0|1 · Bring it home 2-0|1 · Wuppie 3-0|1"],
- ["Oostenrijk","at","Jordanië","jo","17/06",3,1,"Roll-up United 1-0|5 · Jonnited 1-0|5 · Real Manon 1-0|5 · Catch me if you can ! 1-0|5 · Bring it home 2-1|5 · Wuppie 1-0|5 · Hup-Asje-Hup 0-1|1"],
- ["Argentinië","ar","Algerije","dz","17/06",3,0,"Jonnited 3-0|10 · Catch me if you can ! 3-0|10 · Hup-Asje-Hup 4-1|7 · Roll-up United 2-0|5 · Real Manon 3-1|5 · Bring it home 1-0|5 · Wuppie 2-0|5"],
- ["Irak","iq","Noorwegen","no","17/06",1,4,"Roll-up United 0-1|5 · Real Manon 0-2|5 · Catch me if you can ! 0-2|5 · Hup-Asje-Hup 0-1|5 · Wuppie 0-1|5 · Jonnited 1-1|1 · Bring it home 2-0|1"],
- ["Frankrijk","fr","Senegal","sn","16/06",3,1,"Hup-Asje-Hup 3-1|10 · Jonnited 2-0|7 · Real Manon 2-0|7 · Roll-up United 1-0|5 · Catch me if you can ! 4-0|5 · Bring it home 3-0|5 · Wuppie 1-3|1"],
- ["Iran","ir","Nieuw-Zeeland","nz","16/06",2,2,"Catch me if you can ! 1-1|7 · Roll-up United 1-0|1 · Jonnited 1-0|1 · Real Manon 0-1|1 · Hup-Asje-Hup 1-0|1 · Bring it home 3-0|1 · Wuppie 2-0|1"],
- ["Saudi-Arabië","sa","Uruguay","uy","16/06",1,1,"Hup-Asje-Hup 1-1|10 · Real Manon 0-0|7 · Wuppie 0-0|7 · Roll-up United 0-1|1 · Jonnited 0-1|1 · Catch me if you can ! 0-1|1 · Bring it home 0-2|1"],
- ["België","be","Egypte","eg","15/06",1,1,"Roll-up United 1-0|1 · Jonnited 2-0|1 · Real Manon 1-0|1 · Catch me if you can ! 2-1|1 · Hup-Asje-Hup 3-1|1 · Bring it home 4-1|1 · Wuppie 2-3|1"],
- ["Spanje","es","Kaapverdië","cv","15/06",0,0,"Wuppie 0-0|10 · Roll-up United 3-0|1 · Jonnited 2-0|1 · Real Manon 3-0|1 · Catch me if you can ! 3-1|1 · Hup-Asje-Hup 3-1|1 · Bring it home 3-0|1"],
- ["Zweden","se","Tunesië","tn","15/06",5,1,"Roll-up United 1-0|5 · Catch me if you can ! 2-0|5 · Hup-Asje-Hup 3-1|5 · Jonnited 1-1|1 · Real Manon 1-1|1 · Bring it home 0-2|1 · Wuppie 2-3|1"],
- ["Ivoorkust","ci","Ecuador","ec","15/06",1,0,"Real Manon 1-0|10 · Hup-Asje-Hup 1-0|10 · Roll-up United 0-1|1 · Jonnited 0-1|1 · Catch me if you can ! 1-1|1 · Bring it home 1-2|1 · Wuppie 0-0|1"],
- ["Nederland","nl","Japan","jp","14/06",2,2,"Real Manon 1-1|7 · Wuppie 0-0|7 · Roll-up United 1-0|1 · Jonnited 0-1|1 · Catch me if you can ! 3-1|1 · Hup-Asje-Hup 1-2|1 · Bring it home 3-0|1"],
- ["Duitsland","de","Curaçao","cw","14/06",7,1,"Roll-up United 3-0|5 · Jonnited 3-0|5 · Real Manon 3-0|5 · Catch me if you can ! 4-0|5 · Hup-Asje-Hup 3-1|5 · Bring it home 1-0|5 · Wuppie 4-0|5"],
- ["Australië","au","Turkije","tr","14/06",2,0,"Roll-up United 0-1|1 · Jonnited 0-1|1 · Real Manon 1-1|1 · Catch me if you can ! 0-1|1 · Hup-Asje-Hup 0-3|1 · Bring it home 0-2|1 · Wuppie 0-0|1"],
- ["Haïti","ht","Schotland","gb-sct","14/06",0,1,"Roll-up United 0-1|10 · Jonnited 0-1|10 · Bring it home 0-1|10 · Wuppie 0-1|10 · Hup-Asje-Hup 1-2|7 · Real Manon 0-2|5 · Catch me if you can ! 0-3|5"],
- ["Brazilië","br","Marokko","ma","14/06",1,1,"Bring it home 0-0|7 · Roll-up United 1-0|1 · Jonnited 3-0|1 · Real Manon 2-0|1 · Catch me if you can ! 3-1|1 · Hup-Asje-Hup 3-1|1 · Wuppie 0-1|1"],
- ["Qatar","qa","Zwitserland","ch","13/06",1,1,"Hup-Asje-Hup 0-0|7 · Wuppie 0-0|7 · Roll-up United 0-2|1 · Jonnited 0-2|1 · Real Manon 1-0|1 · Catch me if you can ! 0-1|1 · Bring it home 0-3|1"],
- ["Verenigde Staten","us","Paraguay","py","13/06",4,1,"Roll-up United 1-0|5 · Jonnited 2-0|5 · Real Manon 2-1|5 · Hup-Asje-Hup 2-0|5 · Catch me if you can ! 1-1|1 · Bring it home 0-0|1 · Wuppie 0-0|1"],
- ["Canada","ca","Bosnië en Herzegovina","ba","12/06",1,1,"Real Manon 1-1|10 · Hup-Asje-Hup 1-1|10 · Catch me if you can ! 0-0|7 · Roll-up United 1-0|1 · Jonnited 2-1|1 · Bring it home 4-2|1 · Wuppie 3-0|1"],
- ["Zuid-Korea","kr","Tsjechië","cz","12/06",2,1,"Wuppie 2-0|5 · Roll-up United 1-1|1 · Jonnited 0-1|1 · Real Manon 0-1|1 · Catch me if you can ! 1-2|1 · Hup-Asje-Hup 0-2|1 · Bring it home 0-1|1"],
- ["Mexico","mx","Zuid-Afrika","za","11/06",2,0,"Jonnited 2-0|10 · Real Manon 2-0|10 · Bring it home 2-0|10 · Wuppie 2-0|10 · Hup-Asje-Hup 3-1|7 · Roll-up United 1-0|5 · Catch me if you can ! 4-1|5"]
+ ["Frankrijk","fr","Marokko","ma","09/07",2,0,"Roll-up United 2-0|20 · Jonnited 2-0|20 · Real Manon 2-1|10 · Hup-Asje-Hup 1-2|1"],
+ ["Zwitserland","ch","Colombia","co","07/07",0,0,"Real Manon 2-1|10 · Jonnited 1-1|4 · Roll-up United 0-1|1 · Hup-Asje-Hup 0-1|1"],
+ ["Argentinië","ar","Egypte","eg","07/07",3,2,"Roll-up United 1-0|14 · Jonnited 2-1|14 · Hup-Asje-Hup 1-1|10 · Real Manon 1-2|1"],
+ ["Verenigde Staten","us","België","be","07/07",1,4,"Roll-up United 1-2|10 · Jonnited 0-2|10 · Real Manon 1-1|10 · Hup-Asje-Hup 1-2|10"],
+ ["Portugal","pt","Spanje","es","06/07",0,1,"Roll-up United 0-1|20 · Jonnited 0-1|20 · Real Manon 1-2|14 · Hup-Asje-Hup 2-1|1"],
+ ["Mexico","mx","Engeland","gb-eng","06/07",2,3,"Roll-up United 0-1|14 · Jonnited 0-1|14 · Hup-Asje-Hup 1-1|10 · Real Manon 2-1|1"],
+ ["Brazilië","br","Noorwegen","no","05/07",1,2,"Roll-up United 2-1|1 · Jonnited 1-1|1 · Real Manon 1-0|1 · Hup-Asje-Hup 2-0|1"],
+ ["Paraguay","py","Frankrijk","fr","04/07",0,1,"Hup-Asje-Hup 1-2|14 · Roll-up United 0-2|10 · Jonnited 0-3|10 · Real Manon 0-2|10"],
+ ["Canada","ca","Marokko","ma","04/07",0,3,"Roll-up United 0-1|10 · Jonnited 0-2|10 · Real Manon 1-2|10 · Hup-Asje-Hup 1-3|10"],
+ ["Colombia","co","Ghana","gh","04/07",1,0,"Jonnited 1-0|20 · Roll-up United 2-1|14 · Real Manon 1-1|10 · Hup-Asje-Hup 1-1|1"],
+ ["Argentinië","ar","Kaapverdië","cv","04/07",3,2,"Real Manon 2-1|14 · Roll-up United 2-0|10 · Jonnited 2-0|10 · Hup-Asje-Hup 3-1|10"],
+ ["Australië","au","Egypte","eg","03/07",1,1,"Roll-up United 0-1|10 · Jonnited 0-1|10 · Real Manon 1-2|10 · Hup-Asje-Hup 1-2|10"],
+ ["Zwitserland","ch","Algerije","dz","03/07",2,0,"Roll-up United 1-0|10 · Jonnited 1-1|1 · Real Manon 0-1|1 · Hup-Asje-Hup 0-1|1"],
+ ["Portugal","pt","Kroatië","hr","03/07",2,1,"Real Manon 2-1|20 · Roll-up United 1-0|14 · Jonnited 0-0|10 · Hup-Asje-Hup 2-0|10"],
+ ["Spanje","es","Oostenrijk","at","02/07",3,0,"Roll-up United 2-0|10 · Jonnited 2-1|10 · Real Manon 2-0|10 · Hup-Asje-Hup 2-1|10"],
+ ["Verenigde Staten","us","Bosnië en Herzegovina","ba","02/07",2,0,"Real Manon 2-0|20 · Roll-up United 1-0|10 · Jonnited 1-0|10 · Hup-Asje-Hup 1-0|10"],
+ ["België","be","Senegal","sn","01/07",3,2,"Roll-up United 2-1|14 · Real Manon 2-1|14 · Jonnited 2-0|10 · Hup-Asje-Hup 3-1|10"],
+ ["Engeland","gb-eng","DR Congo","cd","01/07",2,1,"Real Manon 2-1|20 · Hup-Asje-Hup 2-1|20 · Roll-up United 2-0|10 · Jonnited 2-0|10"],
+ ["Mexico","mx","Ecuador","ec","01/07",2,0,"Hup-Asje-Hup 3-1|14 · Roll-up United 1-0|10 · Jonnited 2-1|10 · Real Manon 2-1|10"],
+ ["Frankrijk","fr","Zweden","se","30/06",3,0,"Roll-up United 2-0|10 · Jonnited 2-0|10 · Real Manon 3-1|10 · Hup-Asje-Hup 3-2|10"],
+ ["Ivoorkust","ci","Noorwegen","no","30/06",1,2,"Roll-up United 1-2|20 · Hup-Asje-Hup 1-2|20 · Jonnited 0-1|14 · Real Manon 1-0|1"],
+ ["Nederland","nl","Marokko","ma","30/06",1,1,"Jonnited 1-2|10 · Hup-Asje-Hup 1-3|10 · Roll-up United 1-0|1 · Real Manon 1-0|1"],
+ ["Duitsland","de","Paraguay","py","29/06",1,1,"Roll-up United 2-0|1 · Jonnited 1-0|1 · Real Manon 3-1|1 · Hup-Asje-Hup 2-1|1"],
+ ["Brazilië","br","Japan","jp","29/06",2,1,"Hup-Asje-Hup 2-1|20 · Roll-up United 1-0|14 · Jonnited 2-0|10 · Real Manon 2-0|10"],
+ ["Zuid-Afrika","za","Canada","ca","28/06",0,1,"Roll-up United 0-1|20 · Real Manon 0-1|20 · Jonnited 1-2|14 · Hup-Asje-Hup 1-0|1"],
+ ["Algerije","dz","Oostenrijk","at","28/06",3,3,"Roll-up United 1-1|7 · Bring it home 2-2|7 · Wuppie 0-0|7 · Jonnited 1-0|1 · Real Manon 2-1|1 · Hup-Asje-Hup 1-0|1"],
+ ["Jordanië","jo","Argentinië","ar","28/06",1,3,"Jonnited 0-2|7 · Roll-up United 0-1|5 · Real Manon 0-3|5 · Hup-Asje-Hup 2-3|5 · Bring it home 1-1|1 · Wuppie 0-0|1"],
+ ["DR Congo","cd","Oezbekistan","uz","28/06",3,1,"Hup-Asje-Hup 2-0|7 · Roll-up United 1-0|5 · Real Manon 1-0|5 · Jonnited 0-1|1 · Bring it home 0-0|1 · Wuppie 2-4|1"],
+ ["Colombia","co","Portugal","pt","28/06",0,0,"Bring it home 0-0|10 · Wuppie 0-0|10 · Roll-up United 1-1|7 · Jonnited 2-1|1 · Real Manon 0-2|1 · Hup-Asje-Hup 1-3|1"],
+ ["Kroatië","hr","Ghana","gh","27/06",2,1,"Real Manon 2-1|10 · Hup-Asje-Hup 2-1|10 · Roll-up United 1-0|7 · Jonnited 1-0|7 · Bring it home 0-0|1 · Wuppie 1-1|1"],
+ ["Panama","pa","Engeland","gb-eng","27/06",0,2,"Roll-up United 0-2|10 · Jonnited 0-2|10 · Real Manon 0-2|10 · Hup-Asje-Hup 1-2|5 · Bring it home 0-0|1 · Wuppie 2-1|1"],
+ ["Nieuw-Zeeland","nz","België","be","27/06",1,5,"Roll-up United 1-3|5 · Jonnited 0-2|5 · Real Manon 1-2|5 · Hup-Asje-Hup 1-2|5 · Bring it home 2-4|5 · Wuppie 0-3|5"],
+ ["Egypte","eg","Iran","ir","27/06",1,1,"Jonnited 1-1|10 · Roll-up United 1-0|1 · Real Manon 2-1|1 · Hup-Asje-Hup 1-2|1 · Bring it home 0-2|1 · Wuppie 0-1|1"],
+ ["Kaapverdië","cv","Saudi-Arabië","sa","27/06",0,0,"Bring it home 0-0|10 · Roll-up United 1-1|7 · Jonnited 1-0|1 · Real Manon 1-0|1 · Hup-Asje-Hup 2-1|1 · Wuppie 1-2|1"],
+ ["Uruguay","uy","Spanje","es","27/06",0,1,"Jonnited 1-2|7 · Hup-Asje-Hup 2-3|7 · Bring it home 2-3|7 · Roll-up United 0-2|5 · Real Manon 1-3|5 · Wuppie 1-3|5"],
+ ["Senegal","sn","Irak","iq","26/06",5,0,"Roll-up United 2-1|5 · Real Manon 2-1|5 · Hup-Asje-Hup 3-1|5 · Bring it home 2-1|5 · Wuppie 2-0|5 · Jonnited 0-1|1"],
+ ["Noorwegen","no","Frankrijk","fr","26/06",1,4,"Real Manon 0-3|7 · Roll-up United 0-1|5 · Jonnited 0-2|5 · Hup-Asje-Hup 0-2|5 · Bring it home 1-2|5 · Wuppie 0-2|5"],
+ ["Paraguay","py","Australië","au","26/06",0,0,"Hup-Asje-Hup 1-1|7 · Roll-up United 0-1|1 · Jonnited 2-0|1 · Real Manon 0-1|1 · Bring it home 1-2|1 · Wuppie 2-0|1"],
+ ["Turkije","tr","Verenigde Staten","us","26/06",3,2,"Jonnited 1-0|7 · Hup-Asje-Hup 2-0|5 · Wuppie 3-1|5 · Roll-up United 0-1|1 · Real Manon 1-1|1 · Bring it home 0-0|1"],
+ ["Tunesië","tn","Nederland","nl","26/06",1,3,"Hup-Asje-Hup 1-3|10 · Roll-up United 0-2|7 · Real Manon 1-2|5 · Bring it home 1-2|5 · Jonnited 0-0|1 · Wuppie 0-0|1"],
+ ["Japan","jp","Zweden","se","26/06",1,1,"Roll-up United 1-0|1 · Jonnited 2-0|1 · Real Manon 2-1|1 · Hup-Asje-Hup 2-1|1 · Bring it home 5-3|1 · Wuppie 0-1|1"],
+ ["Curaçao","cw","Ivoorkust","ci","25/06",0,2,"Roll-up United 0-2|10 · Real Manon 1-2|5 · Jonnited 1-1|1 · Hup-Asje-Hup 3-1|1 · Bring it home 2-1|1 · Wuppie 2-1|1"],
+ ["Ecuador","ec","Duitsland","de","25/06",2,1,"Roll-up United 1-2|1 · Jonnited 0-1|1 · Real Manon 0-2|1 · Hup-Asje-Hup 1-3|1 · Bring it home 2-3|1 · Wuppie 0-3|1"],
+ ["Tsjechië","cz","Mexico","mx","25/06",0,3,"Roll-up United 0-1|5 · Jonnited 0-2|5 · Real Manon 0-1|5 · Hup-Asje-Hup 1-2|5 · Bring it home 0-1|5 · Wuppie 1-0|1"],
+ ["Zuid-Afrika","za","Zuid-Korea","kr","25/06",1,0,"Jonnited 2-1|7 · Real Manon 2-0|5 · Roll-up United 0-1|1 · Hup-Asje-Hup 1-3|1 · Bring it home 0-1|1 · Wuppie 1-2|1"],
+ ["Marokko","ma","Haïti","ht","25/06",4,2,"Roll-up United 2-0|7 · Jonnited 2-0|7 · Real Manon 2-0|7 · Hup-Asje-Hup 3-1|7 · Bring it home 1-0|5 · Wuppie 1-0|5"],
+ ["Schotland","gb-sct","Brazilië","br","25/06",0,3,"Roll-up United 0-1|5 · Jonnited 0-2|5 · Real Manon 0-2|5 · Hup-Asje-Hup 2-3|5 · Bring it home 4-3|1 · Wuppie 0-0|1"],
+ ["Bosnië en Herzegovina","ba","Qatar","qa","24/06",3,1,"Jonnited 2-0|7 · Roll-up United 1-0|5 · Bring it home 1-0|5 · Real Manon 0-1|1 · Hup-Asje-Hup 1-2|1 · Wuppie 0-1|1"],
+ ["Zwitserland","ch","Canada","ca","24/06",2,1,"Roll-up United 2-1|10 · Real Manon 2-1|10 · Hup-Asje-Hup 2-1|10 · Jonnited 1-0|7 · Wuppie 1-0|7 · Bring it home 0-1|1"],
+ ["Colombia","co","DR Congo","cd","24/06",1,0,"Roll-up United 1-0|10 · Jonnited 1-0|10 · Bring it home 4-2|5 · Real Manon 1-1|1 · Hup-Asje-Hup 1-2|1 · Wuppie 0-1|1"],
+ ["Panama","pa","Kroatië","hr","24/06",0,1,"Roll-up United 0-1|10 · Jonnited 0-1|10 · Real Manon 1-2|7 · Bring it home 1-2|7 · Hup-Asje-Hup 1-3|5 · Wuppie 2-2|1"],
+ ["Engeland","gb-eng","Ghana","gh","23/06",0,0,"Roll-up United 2-0|1 · Jonnited 3-0|1 · Real Manon 2-0|1 · Hup-Asje-Hup 2-1|1 · Bring it home 3-2|1 · Wuppie 1-0|1"],
+ ["Portugal","pt","Oezbekistan","uz","23/06",5,0,"Roll-up United 2-0|5 · Jonnited 2-0|5 · Real Manon 2-0|5 · Hup-Asje-Hup 2-1|5 · Bring it home 1-0|5 · Wuppie 4-2|5"],
+ ["Jordanië","jo","Algerije","dz","23/06",1,2,"Roll-up United 0-1|7 · Jonnited 0-1|7 · Real Manon 0-1|7 · Wuppie 0-2|5 · Hup-Asje-Hup 2-1|1 · Bring it home 0-0|1"],
+ ["Noorwegen","no","Senegal","sn","23/06",3,2,"Roll-up United 1-0|7 · Wuppie 1-0|7 · Bring it home 2-0|5 · Jonnited 0-1|1 · Real Manon 0-1|1 · Hup-Asje-Hup 1-2|1"],
+ ["Frankrijk","fr","Irak","iq","22/06",3,0,"Jonnited 3-0|10 · Hup-Asje-Hup 3-0|10 · Roll-up United 4-0|5 · Real Manon 3-1|5 · Wuppie 4-2|5 · Bring it home 3-3|1"],
+ ["Argentinië","ar","Oostenrijk","at","22/06",2,0,"Real Manon 2-0|10 · Hup-Asje-Hup 3-1|7 · Roll-up United 1-0|5 · Jonnited 3-0|5 · Wuppie 2-1|5 · Bring it home 1-2|1"],
+ ["Nieuw-Zeeland","nz","Egypte","eg","22/06",1,3,"Jonnited 0-2|7 · Real Manon 0-2|7 · Roll-up United 0-1|5 · Wuppie 1-2|5 · Hup-Asje-Hup 1-1|1 · Bring it home 2-2|1"],
+ ["Uruguay","uy","Kaapverdië","cv","22/06",2,2,"Real Manon 1-1|7 · Roll-up United 2-0|1 · Jonnited 2-1|1 · Hup-Asje-Hup 2-1|1 · Bring it home 1-0|1 · Wuppie 3-0|1"],
+ ["België","be","Iran","ir","21/06",0,0,"Roll-up United 2-0|1 · Jonnited 2-1|1 · Real Manon 2-0|1 · Hup-Asje-Hup 2-0|1 · Bring it home 3-0|1 · Wuppie 1-0|1"],
+ ["Spanje","es","Saudi-Arabië","sa","21/06",4,0,"Roll-up United 3-0|5 · Jonnited 3-1|5 · Real Manon 2-0|5 · Hup-Asje-Hup 2-1|5 · Bring it home 2-1|5 · Wuppie 0-0|1"],
+ ["Tunesië","tn","Japan","jp","21/06",0,4,"Roll-up United 0-1|5 · Hup-Asje-Hup 1-2|5 · Bring it home 0-2|5 · Jonnited 1-1|1 · Real Manon 1-1|1 · Wuppie 1-0|1"],
+ ["Ecuador","ec","Curaçao","cw","21/06",0,0,"Bring it home 0-0|10 · Roll-up United 3-0|1 · Jonnited 2-0|1 · Real Manon 1-0|1 · Hup-Asje-Hup 0-1|1 · Wuppie 4-2|1"],
+ ["Duitsland","de","Ivoorkust","ci","20/06",2,1,"Jonnited 2-1|10 · Roll-up United 1-0|7 · Bring it home 1-0|7 · Real Manon 3-0|5 · Hup-Asje-Hup 2-0|5 · Wuppie 0-0|1"],
+ ["Nederland","nl","Zweden","se","20/06",5,1,"Roll-up United 2-1|5 · Jonnited 1-0|5 · Real Manon 1-0|5 · Bring it home 1-0|5 · Wuppie 1-0|5 · Hup-Asje-Hup 1-2|1"],
+ ["Turkije","tr","Paraguay","py","20/06",0,1,"Bring it home 1-3|5 · Roll-up United 1-0|1 · Jonnited 1-1|1 · Real Manon 2-0|1 · Hup-Asje-Hup 2-0|1 · Wuppie 1-0|1"],
+ ["Brazilië","br","Haïti","ht","20/06",3,0,"Roll-up United 3-0|10 · Real Manon 3-0|10 · Wuppie 3-0|10 · Jonnited 2-0|5 · Hup-Asje-Hup 4-0|5 · Bring it home 2-1|5"],
+ ["Schotland","gb-sct","Marokko","ma","20/06",0,1,"Roll-up United 0-1|10 · Wuppie 0-1|10 · Hup-Asje-Hup 1-2|7 · Jonnited 0-2|5 · Real Manon 0-2|5 · Bring it home 2-1|1"],
+ ["Verenigde Staten","us","Australië","au","19/06",2,0,"Jonnited 2-0|10 · Wuppie 3-1|7 · Roll-up United 2-1|5 · Real Manon 2-1|5 · Bring it home 2-1|5 · Hup-Asje-Hup 1-1|1"],
+ ["Mexico","mx","Zuid-Korea","kr","19/06",1,0,"Jonnited 2-1|7 · Hup-Asje-Hup 2-1|7 · Bring it home 3-0|5 · Wuppie 3-1|5 · Roll-up United 1-1|1 · Real Manon 1-1|1"],
+ ["Canada","ca","Qatar","qa","19/06",6,0,"Roll-up United 1-1|1 · Jonnited 0-1|1 · Real Manon 0-1|1 · Hup-Asje-Hup 1-1|1 · Bring it home 0-1|1 · Wuppie 0-0|1"],
+ ["Zwitserland","ch","Bosnië en Herzegovina","ba","18/06",4,1,"Jonnited 1-0|5 · Real Manon 1-0|5 · Bring it home 2-1|5 · Roll-up United 1-1|1 · Hup-Asje-Hup 1-1|1 · Wuppie 0-0|1"],
+ ["Tsjechië","cz","Zuid-Afrika","za","18/06",1,1,"Roll-up United 1-1|10 · Jonnited 1-1|10 · Hup-Asje-Hup 1-1|10 · Real Manon 1-0|1 · Bring it home 1-0|1 · Wuppie 2-0|1"],
+ ["Oezbekistan","uz","Colombia","co","18/06",1,3,"Hup-Asje-Hup 0-2|7 · Roll-up United 0-1|5 · Jonnited 1-2|5 · Real Manon 1-0|1 · Bring it home 1-1|1 · Wuppie 1-0|1"],
+ ["Ghana","gh","Panama","pa","18/06",1,0,"Wuppie 2-1|7 · Hup-Asje-Hup 2-0|5 · Roll-up United 1-1|1 · Jonnited 0-1|1 · Real Manon 1-1|1 · Bring it home 0-0|1"],
+ ["Engeland","gb-eng","Kroatië","hr","17/06",4,2,"Real Manon 2-1|5 · Wuppie 2-1|5 · Roll-up United 1-1|1 · Jonnited 1-1|1 · Hup-Asje-Hup 1-2|1 · Bring it home 1-1|1"],
+ ["Portugal","pt","DR Congo","cd","17/06",1,1,"Roll-up United 2-0|1 · Jonnited 3-0|1 · Real Manon 2-0|1 · Hup-Asje-Hup 4-0|1 · Bring it home 2-0|1 · Wuppie 3-0|1"],
+ ["Oostenrijk","at","Jordanië","jo","17/06",3,1,"Roll-up United 1-0|5 · Jonnited 1-0|5 · Real Manon 1-0|5 · Bring it home 2-1|5 · Wuppie 1-0|5 · Hup-Asje-Hup 0-1|1"],
+ ["Argentinië","ar","Algerije","dz","17/06",3,0,"Jonnited 3-0|10 · Hup-Asje-Hup 4-1|7 · Roll-up United 2-0|5 · Real Manon 3-1|5 · Bring it home 1-0|5 · Wuppie 2-0|5"],
+ ["Irak","iq","Noorwegen","no","17/06",1,4,"Roll-up United 0-1|5 · Real Manon 0-2|5 · Hup-Asje-Hup 0-1|5 · Wuppie 0-1|5 · Jonnited 1-1|1 · Bring it home 2-0|1"],
+ ["Frankrijk","fr","Senegal","sn","16/06",3,1,"Hup-Asje-Hup 3-1|10 · Jonnited 2-0|7 · Real Manon 2-0|7 · Roll-up United 1-0|5 · Bring it home 3-0|5 · Wuppie 1-3|1"],
+ ["Iran","ir","Nieuw-Zeeland","nz","16/06",2,2,"Roll-up United 1-0|1 · Jonnited 1-0|1 · Real Manon 0-1|1 · Hup-Asje-Hup 1-0|1 · Bring it home 3-0|1 · Wuppie 2-0|1"],
+ ["Saudi-Arabië","sa","Uruguay","uy","16/06",1,1,"Hup-Asje-Hup 1-1|10 · Real Manon 0-0|7 · Wuppie 0-0|7 · Roll-up United 0-1|1 · Jonnited 0-1|1 · Bring it home 0-2|1"],
+ ["België","be","Egypte","eg","15/06",1,1,"Roll-up United 1-0|1 · Jonnited 2-0|1 · Real Manon 1-0|1 · Hup-Asje-Hup 3-1|1 · Bring it home 4-1|1 · Wuppie 2-3|1"],
+ ["Spanje","es","Kaapverdië","cv","15/06",0,0,"Wuppie 0-0|10 · Roll-up United 3-0|1 · Jonnited 2-0|1 · Real Manon 3-0|1 · Hup-Asje-Hup 3-1|1 · Bring it home 3-0|1"],
+ ["Zweden","se","Tunesië","tn","15/06",5,1,"Roll-up United 1-0|5 · Hup-Asje-Hup 3-1|5 · Jonnited 1-1|1 · Real Manon 1-1|1 · Bring it home 0-2|1 · Wuppie 2-3|1"],
+ ["Ivoorkust","ci","Ecuador","ec","15/06",1,0,"Real Manon 1-0|10 · Hup-Asje-Hup 1-0|10 · Roll-up United 0-1|1 · Jonnited 0-1|1 · Bring it home 1-2|1 · Wuppie 0-0|1"],
+ ["Nederland","nl","Japan","jp","14/06",2,2,"Real Manon 1-1|7 · Wuppie 0-0|7 · Roll-up United 1-0|1 · Jonnited 0-1|1 · Hup-Asje-Hup 1-2|1 · Bring it home 3-0|1"],
+ ["Duitsland","de","Curaçao","cw","14/06",7,1,"Roll-up United 3-0|5 · Jonnited 3-0|5 · Real Manon 3-0|5 · Hup-Asje-Hup 3-1|5 · Bring it home 1-0|5 · Wuppie 4-0|5"],
+ ["Australië","au","Turkije","tr","14/06",2,0,"Roll-up United 0-1|1 · Jonnited 0-1|1 · Real Manon 1-1|1 · Hup-Asje-Hup 0-3|1 · Bring it home 0-2|1 · Wuppie 0-0|1"],
+ ["Haïti","ht","Schotland","gb-sct","14/06",0,1,"Roll-up United 0-1|10 · Jonnited 0-1|10 · Bring it home 0-1|10 · Wuppie 0-1|10 · Hup-Asje-Hup 1-2|7 · Real Manon 0-2|5"],
+ ["Brazilië","br","Marokko","ma","14/06",1,1,"Bring it home 0-0|7 · Roll-up United 1-0|1 · Jonnited 3-0|1 · Real Manon 2-0|1 · Hup-Asje-Hup 3-1|1 · Wuppie 0-1|1"],
+ ["Qatar","qa","Zwitserland","ch","13/06",1,1,"Hup-Asje-Hup 0-0|7 · Wuppie 0-0|7 · Roll-up United 0-2|1 · Jonnited 0-2|1 · Real Manon 1-0|1 · Bring it home 0-3|1"],
+ ["Verenigde Staten","us","Paraguay","py","13/06",4,1,"Roll-up United 1-0|5 · Jonnited 2-0|5 · Real Manon 2-1|5 · Hup-Asje-Hup 2-0|5 · Bring it home 0-0|1 · Wuppie 0-0|1"],
+ ["Canada","ca","Bosnië en Herzegovina","ba","12/06",1,1,"Real Manon 1-1|10 · Hup-Asje-Hup 1-1|10 · Roll-up United 1-0|1 · Jonnited 2-1|1 · Bring it home 4-2|1 · Wuppie 3-0|1"],
+ ["Zuid-Korea","kr","Tsjechië","cz","12/06",2,1,"Wuppie 2-0|5 · Roll-up United 1-1|1 · Jonnited 0-1|1 · Real Manon 0-1|1 · Hup-Asje-Hup 0-2|1 · Bring it home 0-1|1"],
+ ["Mexico","mx","Zuid-Afrika","za","11/06",2,0,"Jonnited 2-0|10 · Real Manon 2-0|10 · Bring it home 2-0|10 · Wuppie 2-0|10 · Hup-Asje-Hup 3-1|7 · Roll-up United 1-0|5"]
 ];
 
 function hue(n){let h=0;for(let i=0;i<n.length;i++)h=(h*31+n.charCodeAt(i))%360;return h;}
@@ -323,13 +323,13 @@ function out(s){const [h,a]=s.split('-').map(Number);return h>a?'H':h<a?'A':'D';
 function scClass(s,fav){const o=out(s);return o==='D'?'sy':(fav==null?'':(o===fav?'sg':'sr'));}
 
 // subtitle
-function sub(){document.getElementById('sub').textContent=`Knockout phase · 72/72 group · 24/32 KO · ${STAND.length} players`;}
+function sub(){document.getElementById('sub').textContent=`Knockout phase · 72/72 group · 25/32 KO · ${STAND.length} players`;}
 sub();
 
 document.getElementById('missed').innerHTML=
- `Latest in: <b>Zwitserland 0-0 Colombia</b> — only <b>Real Manon</b> nailed it. <b>Roll-up United</b> just won't stop — <b>569</b> and untouchable, 9 exact and ice-cold. And <b>Bring it home</b>? Vanished — rock bottom on 235, 334 adrift.`;
+ `Latest in: <b>Frankrijk 2-0 Marokko</b> — only <b>Real Manon</b> nailed it. <b>Roll-up United</b> is bossing this, <b>589</b> and 23 clear, 9 exact and ice-cold. Spare a thought for <b>Bring it home</b>, lost at sea on 235. <b>Jonnited</b> got cold feet — swapped the #100 pick 2-0 → 3-1 (Changes).`;
 document.getElementById('upcoming').innerHTML=
- `Next up: <b>Frankrijk – Marokko</b>. 2 of 5 have piled onto <b>2-0</b>. <b>Roll-up United</b> is swinging for the fences at 2-0. Then <b>Spanje–België</b> and <b>Noorwegen–Engeland</b>. Reeling in <b>Roll-up United</b> from here? Best of luck.`;
+ `On deck: <b>Spanje – België</b>. 3 of 4 have piled onto <b>1-2</b>. Then <b>Noorwegen–Engeland</b> and <b>Argentinië–Zwitserland</b>. Someone, anyone, please catch <b>Roll-up United</b>.`;
 
 // standings
 const ranked=[...STAND].sort((a,b)=> b[5]-a[5]||b[1]-a[1]||b[2]-a[2]||b[3]-a[3]||a[0].localeCompare(b[0]));
@@ -423,6 +423,7 @@ renderTrend();
 const CHANGES=[
  ["Jonnited",98,"Spanje","België","1-1","1-2","2026-07-08T21:59"],
  ["Jonnited",99,"Noorwegen","Engeland","1-1","2-1","2026-07-08T18:12"],
+ ["Jonnited",100,"Argentinië","Zwitserland","2-0","3-1","2026-07-08T11:39"],
  ["Roll-up United",98,"Spanje","België","0-1","1-0","2026-07-08T04:04"],
  ["Go-Dre-Go!",93,"Portugal","Spanje","1-1","2-2","2026-07-03T22:13"],
  ["Roll-up United",88,"Colombia","Ghana","1-0","2-1","2026-07-03T08:49"],
@@ -455,7 +456,7 @@ const CHANGES=[
  ["Real Manon",81,"België","Senegal",null,"2-1","2026-06-28T13:21"],
  ["Hup-Asje-Hup",74,"Brazilië","Japan",null,"2-1","2026-06-28T13:21"]
 ];
-const SNAP={"Roll-up United":{"3332996":"1-0","3332998":"1-2","3332999":"2-0","3333039":"1-0"},"Jonnited":{"3332996":"2-0","3332998":"2-1","3332999":"2-0","3333039":"1-2"},"Real Manon":{"3332996":"2-0","3332998":"2-0","3332999":"2-1","3333039":"1-2"},"Catch me if you can !":{"3332996":"3-1","3332998":"1-1","3332999":"2-1","3333039":"2-2"},"Hup-Asje-Hup":{"3332996":"2-0","3332998":"2-1","3332999":"1-2","3333039":"1-2"}};
+const SNAP={"Roll-up United":{"3332996":"1-0","3332998":"1-2","3333039":"1-0"},"Jonnited":{"3332996":"3-1","3332998":"2-1","3333039":"1-2"},"Real Manon":{"3332996":"2-0","3332998":"2-0","3333039":"1-2"},"Hup-Asje-Hup":{"3332996":"2-0","3332998":"2-1","3333039":"1-2"}};
 function renderChanges(){
   const host=document.getElementById('changefeed'); if(!host) return;
   if(!CHANGES.length){host.innerHTML='<div class="blank"><span class="e">🪵</span>No changes logged yet.<br>Edits show up here as players tweak their predictions.</div>';return;}
