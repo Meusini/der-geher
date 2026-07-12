@@ -191,7 +191,7 @@
 
   <footer>
     Made for the Der Geher crew · data from <a href="https://wkpronostiek.sporza.be/" target="_blank" rel="noopener">Sporza Pronostiek ↗</a><br>
-    Flags via flagcdn.com · updated 12/07 08:56
+    Flags via flagcdn.com · updated 12/07 16:04
   </footer>
 </div>
 
@@ -211,8 +211,8 @@ const PREV={"Roll-up United":1,"Jonnited":2,"Real Manon":3,"Hup-Asje-Hup":4,"Jam
 const PREVAT=100;
 // home, homeISO, away, awayISO, when, pH, pD, pA, picks
 const NEXT=[
- ["Frankrijk","fr","Spanje","es","14/07 21:00",null,null,null,"Ik weet niet of we Bart nog kunnen verslaan 2-0 · Jonnited 1-0"],
- ["Engeland","gb-eng","Argentinië","ar","15/07 21:00",null,null,null,"Roll-up United 1-2"],
+ ["Frankrijk","fr","Spanje","es","14/07 21:00",null,null,null,"Roll-up United 1-0 · Ik weet niet of we Bart nog kunnen verslaan 2-0 · Real Manon 2-0 · Jammer 2-2 · Hup-Asje-Hup 2-1 · Jonnited 1-0"],
+ ["Engeland","gb-eng","Argentinië","ar","15/07 21:00",null,null,null,"Roll-up United 1-0 · Real Manon 1-0 · Jammer 1-2 · Hup-Asje-Hup 2-1"],
  ["Verliezer HF 1","","Verliezer HF 2","","18/07 23:00",null,null,null,""],
  ["Winnaar HF 1","","Winnaar HF 2","","19/07 21:00",null,null,null,""]
 ];
@@ -332,9 +332,9 @@ function sub(){document.getElementById('sub').textContent=`Knockout phase · 72/
 sub();
 
 document.getElementById('missed').innerHTML=
- `Latest in: <b>Argentinië 3-1 Zwitserland</b> — only <b>Roll-up United</b> nailed it. <b>Roll-up United</b> is bossing this, <b>633</b> and 51 clear, 9 exact and ice-cold. Spare a thought for <b>Bring it home</b>, lost at sea on 235.`;
+ `Latest in: <b>Argentinië 3-1 Zwitserland</b> — only <b>Roll-up United</b> nailed it. <b>Roll-up United</b> is bossing this, <b>633</b> and 51 clear, 9 exact and ice-cold. Spare a thought for <b>Bring it home</b>, lost at sea on 235. <b>Roll-up United</b> got cold feet — swapped the #102 pick 1-2 → 1-0 (Changes).`;
 document.getElementById('upcoming').innerHTML=
- `On deck: <b>Frankrijk – Spanje</b>. No two agree — 2 picks, 2 different scores. <b>Ik weet niet of we Bart nog kunnen verslaan</b> is swinging for the fences at 2-0. Then <b>Engeland–Argentinië</b> and <b>Verliezer HF 1–Verliezer HF 2</b>. Reeling in <b>Roll-up United</b> from here? Best of luck.`;
+ `On deck: <b>Frankrijk – Spanje</b>. 2 of 6 have piled onto <b>1-0</b>. <b>Ik weet niet of we Bart nog kunnen verslaan</b> is swinging for the fences at 2-0. <b>Jammer</b> is the brave one calling a draw. Then <b>Engeland–Argentinië</b> and <b>Verliezer HF 1–Verliezer HF 2</b>. Reeling in <b>Roll-up United</b> from here? Best of luck.`;
 
 // standings
 const ranked=[...STAND].sort((a,b)=> b[5]-a[5]||b[1]-a[1]||b[2]-a[2]||b[3]-a[3]||a[0].localeCompare(b[0]));
@@ -426,6 +426,7 @@ renderTrend();
 
 // changes — recent prediction activity. CHANGES = [player, gameNo, home, away, before, after, isoTime]; before=null = first log/added, set = edited.
 const CHANGES=[
+ ["Roll-up United",102,"Engeland","Argentinië","1-2","1-0","2026-07-12T06:56"],
  ["Jonnited",100,"Argentinië","Zwitserland","3-1","2-0","2026-07-10T21:08"],
  ["Jonnited",98,"Spanje","België","1-1","1-2","2026-07-08T21:59"],
  ["Jonnited",99,"Noorwegen","Engeland","1-1","2-1","2026-07-08T18:12"],
@@ -462,7 +463,7 @@ const CHANGES=[
  ["Real Manon",81,"België","Senegal",null,"2-1","2026-06-28T13:21"],
  ["Hup-Asje-Hup",74,"Brazilië","Japan",null,"2-1","2026-06-28T13:21"]
 ];
-const SNAP={"Ik weet niet of we Bart nog kunnen verslaan":{"3332980":"2-0"},"Jonnited":{"3332980":"1-0"},"Roll-up United":{"3333041":"1-2"}};
+const SNAP={"Roll-up United":{"3332980":"1-0","3333041":"1-0"},"Ik weet niet of we Bart nog kunnen verslaan":{"3332980":"2-0"},"Real Manon":{"3332980":"2-0","3333041":"1-0"},"Jammer":{"3332980":"2-2","3333041":"1-2"},"Hup-Asje-Hup":{"3332980":"2-1","3333041":"2-1"},"Jonnited":{"3332980":"1-0"}};
 function renderChanges(){
   const host=document.getElementById('changefeed'); if(!host) return;
   if(!CHANGES.length){host.innerHTML='<div class="blank"><span class="e">🪵</span>No changes logged yet.<br>Edits show up here as players tweak their predictions.</div>';return;}
