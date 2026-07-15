@@ -191,33 +191,33 @@
 
   <footer>
     Made for the Der Geher crew · data from <a href="https://wkpronostiek.sporza.be/" target="_blank" rel="noopener">Sporza Pronostiek ↗</a><br>
-    Flags via flagcdn.com · updated 14/07 16:07
+    Flags via flagcdn.com · updated 15/07 07:05
   </footer>
 </div>
 
 <script>
 // [name, exact, gd, winner, miss, points]
 const STAND=[
- ["Roll-up United",9,9,26,28,633,322],
- ["Jonnited",11,12,15,34,582,279],
- ["Real Manon",8,9,25,30,553,255],
- ["Hup-Asje-Hup",9,12,19,32,533,232],
- ["Jammer",8,6,22,36,515,247],
- ["Ik weet niet of we Bart nog kunnen verslaan",3,7,27,35,487,238],
+ ["Roll-up United",9,9,26,28,634,323],
+ ["Jonnited",11,12,15,34,583,280],
+ ["Real Manon",8,9,25,30,554,256],
+ ["Hup-Asje-Hup",9,12,19,32,534,233],
+ ["Jammer",8,6,22,36,516,248],
+ ["Ik weet niet of we Bart nog kunnen verslaan",3,7,27,35,488,239],
  ["Wuppie",6,8,19,39,250,0],
  ["Bring it home",5,5,22,40,235,0]
 ];
 const PREV={"Roll-up United":1,"Jonnited":2,"Real Manon":3,"Hup-Asje-Hup":4,"Jammer":5,"Ik weet niet of we Bart nog kunnen verslaan":6,"Wuppie":7,"Bring it home":8};
-const PREVAT=100;
+const PREVAT=101;
 // home, homeISO, away, awayISO, when, pH, pD, pA, picks
 const NEXT=[
- ["Frankrijk","fr","Spanje","es","14/07 21:00",null,null,null,"Roll-up United 2-0 · Ik weet niet of we Bart nog kunnen verslaan 2-0 · Real Manon 2-0 · Jammer 2-2 · Hup-Asje-Hup 2-1 · Jonnited 1-0"],
  ["Engeland","gb-eng","Argentinië","ar","15/07 21:00",null,null,null,"Roll-up United 1-0 · Ik weet niet of we Bart nog kunnen verslaan 2-0 · Real Manon 1-0 · Jammer 1-2 · Hup-Asje-Hup 2-1"],
- ["Verliezer HF 1","","Verliezer HF 2","","18/07 23:00",null,null,null,""],
- ["Winnaar HF 1","","Winnaar HF 2","","19/07 21:00",null,null,null,""]
+ ["Frankrijk","fr","Verliezer HF 2","","18/07 23:00",null,null,null,""],
+ ["Spanje","es","Winnaar HF 2","","19/07 21:00",null,null,null,""]
 ];
 // home, homeISO, away, awayISO, when, homeScore, awayScore, "Name h-a|pts · ..."
 const LAST=[
+ ["Frankrijk","fr","Spanje","es","14/07",0,2,"Roll-up United 2-0|1 · Ik weet niet of we Bart nog kunnen verslaan 2-0|1 · Real Manon 2-0|1 · Jammer 2-2|1 · Hup-Asje-Hup 2-1|1 · Jonnited 1-0|1"],
  ["Argentinië","ar","Zwitserland","ch","12/07",3,1,"Jammer 3-1|20 · Ik weet niet of we Bart nog kunnen verslaan 2-0|14 · Real Manon 2-0|14 · Hup-Asje-Hup 2-0|14 · Jonnited 2-0|14 · Roll-up United 1-0|10"],
  ["Noorwegen","no","Engeland","gb-eng","11/07",1,2,"Roll-up United 1-2|20 · Jammer 1-1|10 · Ik weet niet of we Bart nog kunnen verslaan 1-1|1 · Real Manon 2-0|1 · Hup-Asje-Hup 2-1|1 · Jonnited 2-1|1"],
  ["Spanje","es","België","be","10/07",2,1,"Ik weet niet of we Bart nog kunnen verslaan 2-1|20 · Roll-up United 1-0|14 · Real Manon 1-2|1 · Jammer 2-2|1 · Hup-Asje-Hup 1-2|1 · Jonnited 1-2|1"],
@@ -328,13 +328,13 @@ function out(s){const [h,a]=s.split('-').map(Number);return h>a?'H':h<a?'A':'D';
 function scClass(s,fav){const o=out(s);return o==='D'?'sy':(fav==null?'':(o===fav?'sg':'sr'));}
 
 // subtitle
-function sub(){document.getElementById('sub').textContent=`Knockout phase · 72/72 group · 28/32 KO · ${STAND.length} players`;}
+function sub(){document.getElementById('sub').textContent=`Knockout phase · 72/72 group · 29/32 KO · ${STAND.length} players`;}
 sub();
 
 document.getElementById('missed').innerHTML=
- `Latest in: <b>Argentinië 3-1 Zwitserland</b> — only <b>Roll-up United</b> nailed it. <b>Roll-up United</b> is bossing this, <b>633</b> and 51 clear, 9 exact and ice-cold. Spare a thought for <b>Bring it home</b>, lost at sea on 235. <b>Roll-up United</b> got cold feet — swapped the #101 pick 1-0 → 2-0 (Changes).`;
+ `Latest in: <b>Frankrijk 0-2 Spanje</b> — nobody had that on their card. Nobody's laying a glove on <b>Roll-up United</b> (<b>634</b>), 9 exact and ice-cold. Anchored to the foot: <b>Bring it home</b>, 235 and 399 off the pace.`;
 document.getElementById('upcoming').innerHTML=
- `On deck: <b>Frankrijk – Spanje</b>. 3 of 6 have piled onto <b>2-0</b>. <b>Roll-up United</b> is swinging for the fences at 2-0. <b>Jammer</b> is the brave one calling a draw. Then <b>Engeland–Argentinië</b> and <b>Verliezer HF 1–Verliezer HF 2</b>. Reeling in <b>Roll-up United</b> from here? Best of luck.`;
+ `Up next: <b>Engeland – Argentinië</b>. 2 of 5 have piled onto <b>1-0</b>. <b>Ik weet niet of we Bart nog kunnen verslaan</b> is swinging for the fences at 2-0. Then <b>Frankrijk–Verliezer HF 2</b> and <b>Spanje–Winnaar HF 2</b>. Someone, anyone, please catch <b>Roll-up United</b>.`;
 
 // standings
 const ranked=[...STAND].sort((a,b)=> b[5]-a[5]||b[1]-a[1]||b[2]-a[2]||b[3]-a[3]||a[0].localeCompare(b[0]));
@@ -464,7 +464,7 @@ const CHANGES=[
  ["Real Manon",81,"België","Senegal",null,"2-1","2026-06-28T13:21"],
  ["Hup-Asje-Hup",74,"Brazilië","Japan",null,"2-1","2026-06-28T13:21"]
 ];
-const SNAP={"Roll-up United":{"3332980":"2-0","3333041":"1-0"},"Ik weet niet of we Bart nog kunnen verslaan":{"3332980":"2-0","3333041":"2-0"},"Real Manon":{"3332980":"2-0","3333041":"1-0"},"Jammer":{"3332980":"2-2","3333041":"1-2"},"Hup-Asje-Hup":{"3332980":"2-1","3333041":"2-1"},"Jonnited":{"3332980":"1-0"}};
+const SNAP={"Roll-up United":{"3333041":"1-0"},"Ik weet niet of we Bart nog kunnen verslaan":{"3333041":"2-0"},"Real Manon":{"3333041":"1-0"},"Jammer":{"3333041":"1-2"},"Hup-Asje-Hup":{"3333041":"2-1"}};
 function renderChanges(){
   const host=document.getElementById('changefeed'); if(!host) return;
   if(!CHANGES.length){host.innerHTML='<div class="blank"><span class="e">🪵</span>No changes logged yet.<br>Edits show up here as players tweak their predictions.</div>';return;}
